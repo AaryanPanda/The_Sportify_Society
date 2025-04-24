@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu } from "lucide-react";
-import { Button } from "../ui/buttons";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import logo from "../assets/sportify_logo1.png";
 
@@ -15,23 +14,17 @@ const navLinks = [
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [pathname, setPathname] = useState(window.location.pathname);
+  const location = useLocation();
+  const pathname = location.pathname;
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 80);
     };
 
-    const handleLocationChange = () => {
-      setPathname(window.location.pathname);
-    };
-
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("popstate", handleLocationChange);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("popstate", handleLocationChange);
     };
   }, []);
 
@@ -66,13 +59,12 @@ const Navbar = () => {
             <nav className="hidden md:flex items-center space-x-6">
               {navLinks.map((link) => (
                 <Link
-                  // style={{ outline: 'none', border: 'none' }}
                   key={link.path}
                   to={link.path}
                   className={`text-sm font-medium transition-all duration-200 relative group focus:outline-none active:outline-none active:ring-0 ${
                     pathname === link.path
                       ? "text-transparent bg-clip-text bg-[linear-gradient(90deg,#ff0000,#ff5a00,#ff9a00,#ffce00,#ffe808)]"
-                      : "text-white hover:text-orange-400"
+                      : "text-white hover:text-transparent hover:bg-clip-text hover:bg-[linear-gradient(90deg,#ff0000,#ff5a00,#ff9a00,#ffce00,#ffe808)]"
                   }`}
                 >
                   {link.name}
@@ -83,13 +75,11 @@ const Navbar = () => {
 
             {/* Mobile Navigation */}
             <Sheet>
-              <SheetTrigger asChild className="md:hidden">
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6 text-white" />
-                  <span className="sr-only">Toggle menu</span>
-                </Button>
+              <SheetTrigger className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-black/20 focus:outline-none">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Toggle menu</span>
               </SheetTrigger>
-              <SheetContent side="right" className="bg-black text-white">
+              <SheetContent side="right" className="bg-black text-white pt-10">
                 <div className="flex flex-col space-y-6 mt-6">
                   {navLinks.map((link) => (
                     <Link
@@ -98,7 +88,7 @@ const Navbar = () => {
                       className={`text-lg font-medium transition-all duration-300 ${
                         pathname === link.path
                           ? "text-transparent bg-clip-text bg-[linear-gradient(90deg,#ff0000,#ff5a00,#ff9a00,#ffce00,#ffe808)]"
-                          : "text-white hover:text-orange-400"
+                          : "text-white hover:text-transparent hover:bg-clip-text hover:bg-[linear-gradient(90deg,#ff0000,#ff5a00,#ff9a00,#ffce00,#ffe808)]"
                       }`}
                     >
                       {link.name}
@@ -109,7 +99,7 @@ const Navbar = () => {
             </Sheet>
           </div>
         </div>
-      </div>
+      </div>  
     </header>
   );
 };
