@@ -71,57 +71,64 @@ export const upcomingEvents = [
   
   export const pastEvents = [
     {
-      id: "past-event-1",
-      title: "Inter-Department Cricket Tournament 2024",
-      date: "March 10, 2024",
-      time: "9:00 AM - 6:00 PM",
-      location: "IIT Madras Cricket Ground",
-      category: "Cricket",
-      description:
-        "The Computer Science department emerged victorious in the closely contested final against the Electrical Engineering department. The tournament saw participation from 12 departments.",
-      image: "/placeholder.svg?height=400&width=600",
-      isPast: true,
-      tags: ["Cricket", "Tournament", "Inter-Department"],
-    },
+      {
+        id: "past-event-1",
+        title: "Beyond the Goal Post",
+        date: "Date Not Specified",
+        time: "Time Not Specified",
+        location: "Location Not Specified",
+        category: "Football Quiz",
+        description:
+          "Beyond the Goal Post was an exciting football-themed quiz competition hosted by Sportify in collaboration with Nilgiri House and partners. Designed exclusively for BS students, the event challenged participants to decode the beautiful game and prove their football fandom.",
+        image: "/placeholder.svg?height=400&width=600",
+        isPast: true,
+        tags: ["Football", "Quiz", "Competition", "Sportify", "Fandom", "Nilgiri House"],
+      },
+      
     {
-      id: "past-event-2",
-      title: "Annual Sports Day 2024",
-      date: "February 15, 2024",
-      time: "8:00 AM - 8:00 PM",
-      location: "IIT Madras Sports Complex",
-      category: "Multi-sport",
-      description:
-        "A day filled with various sporting events including athletics, swimming, and team sports. The event was a huge success with over 500 participants from across the campus.",
-      image: "/placeholder.svg?height=400&width=600",
-      isPast: true,
-      tags: ["Sports Day", "Athletics", "Swimming", "Annual Event"],
-    },
+      
+        id: "past-event-2",
+        title: "Boundary Blazers",
+        date: "Date Not Specified",
+        time: "Time Not Specified",
+        location: "Location Not Specified",
+        category: "Cricket Quiz",
+        description:
+          "Boundary Blazers was a Cricket Quiz packed with thrilling questions, iconic moments, and fun facts from the world of cricket. Whether you're a casual fan or a cricket nerd, this was the ultimate chance to show off skills and win exciting prizes.",
+        image: "/placeholder.svg?height=400&width=600",
+        isPast: true,
+        tags: ["Cricket", "Quiz", "Competition", "Sports Trivia", "Exciting Prizes", "Fun Facts"],
+      },
+      
     {
-      id: "past-event-3",
-      title: "Basketball Tournament 2023",
-      date: "November 20, 2023",
-      time: "2:00 PM - 8:00 PM",
-      location: "IIT Madras Basketball Court",
-      category: "Basketball",
-      description:
-        "The Mechanical Engineering team won the basketball tournament after an intense final match that went into overtime. The tournament featured 8 teams competing in a knockout format.",
-      image: "/placeholder.svg?height=400&width=600",
-      isPast: true,
-      tags: ["Basketball", "Tournament", "Knockout"],
-    },
-    {
-      id: "past-event-4",
-      title: "Football League 2023",
-      date: "October 5-25, 2023",
-      time: "Various timings",
-      location: "IIT Madras Football Field",
-      category: "Football",
-      description:
-        "The month-long football league saw 10 teams competing in a round-robin format. The Civil Engineering department emerged as champions with an unbeaten record.",
-      image: "/placeholder.svg?height=400&width=600",
-      isPast: true,
-      tags: ["Football", "League", "Round-Robin"],
-    },
+      
+        id: "past-event-3",
+        title: "Rings of Glory",
+        date: "July 27-28, 2024",
+        time: "Prelims: 8:00 PM - 10:00 PM | Finale: 7:00 PM - 10:00 PM",
+        location: "Online - Unstop & Google Meet",
+        category: "Olympics Trivia",
+        description:
+          "Rings of Glory was an engaging two-day trivia event that tested participants' knowledge of the Olympic Games. The Prelims were held on 27th July via Unstop from 8–10 PM, followed by the Finale on 28th July conducted on Google Meet from 7–10 PM. The event saw enthusiastic participation from students who competed for glory in this fiery battle of wits and Olympic spirit.",
+        image: "/placeholder.svg?height=400&width=600",
+        isPast: true,
+        tags: ["Olympics", "Trivia", "Competition", "Online Event", "Sports Knowledge", "Battle of Wits"],
+      },
+      
+      {
+        id: "past-event-4",
+        title: "Bharat Ke Veer - Remembering the Past, Inspiring the Future",
+        date: "August 11, 2024",
+        time: "Time Not Specified",
+        location: "Online - Google Meet",
+        category: "Patriotic Event",
+        description:
+          "To commemorate Independence Day, Sportify, in collaboration with Balidaan, organized Bharat Ke Veer — a patriotic event dedicated to honoring our heroes and celebrating the spirit of India. The event featured a Guest Speaker Session with JWO Deepak Kumar, an Indian Air Force officer and decorated Olympian, who shared inspiring insights from his journey through international sporting arenas and the armed forces.",
+        image: "/placeholder.svg?height=400&width=600",
+        isPast: true,
+        tags: ["Independence Day", "Patriotism", "Guest Speaker", "Indian Air Force", "Olympian", "Balidaan", "Sportify"],
+      },
+      
   ];
   
   export const teamMembers = [
