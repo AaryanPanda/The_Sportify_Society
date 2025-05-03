@@ -33,7 +33,7 @@ export default function UpcomingEvents() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 bg-gradient-to-br from-black via-[#1a1a1a] to-black dark:bg-gray-950"
+      className="py-20 bg-gradient-to-br from-black via-[#1a1a1a] to-black dark:bg-gray-950 px-16"
       id="upcoming-events"
     >
       <div className="container mx-auto px-4">

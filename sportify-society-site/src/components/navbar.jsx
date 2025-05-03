@@ -31,11 +31,19 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-black/90 backdrop-blur-md shadow-lg" : "bg-transparent"
+        isScrolled ? "bg-black/90 backdrop-blur-md shadow-lg" : "bg-black/90 backdrop-blur-md shadow-lg"
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
+      {/* Stylish white reflection border that's thicker in center and fades to edges */}
+      <div className="absolute bottom-0 left-0 right-0 h-[2px] w-full">
+        <div className="relative h-full w-full">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-70"></div>
+          <div className="absolute inset-0 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent blur-[0.5px] opacity-60"></div>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-6 md:px-8 lg:px-12">
+        <div className="flex items-center justify-between h-16 md:h-16">
           {/* Logo */}
           <Link
             to="/"
@@ -56,19 +64,26 @@ const Navbar = () => {
 
           {/* Desktop Navigation shifted to the right */}
           <div className="flex items-center space-x-6">
-            <nav className="hidden md:flex items-center space-x-6">
+            <nav className="hidden md:flex items-center space-x-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`text-sm font-medium transition-all duration-200 relative group focus:outline-none active:outline-none active:ring-0 ${
+                  className={`relative text-sm font-medium py-2 transition-all duration-200 group focus:outline-none active:outline-none active:ring-0 ${
                     pathname === link.path
                       ? "text-transparent bg-clip-text bg-[linear-gradient(90deg,#ff0000,#ff5a00,#ff9a00,#ffce00,#ffe808)]"
                       : "text-white hover:text-transparent hover:bg-clip-text hover:bg-[linear-gradient(90deg,#ff0000,#ff5a00,#ff9a00,#ffce00,#ffe808)]"
                   }`}
                 >
                   {link.name}
-                  <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-gradient-to-r from-red-500 via-orange-400 to-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+                  
+                  {/* Enhanced hover effect with flame gradient underline */}
+                  <span className={`absolute left-0 -bottom-0 h-[2px] bg-gradient-to-r from-red-500 via-orange-400 to-yellow-400 rounded-full transition-all duration-300 ${
+                    pathname === link.path ? "w-full" : "w-0 group-hover:w-full"
+                  }`}></span>
+                  
+                  {/* Subtle glow effect on hover */}
+                  
                 </Link>
               ))}
             </nav>
@@ -85,13 +100,17 @@ const Navbar = () => {
                     <Link
                       key={link.path}
                       to={link.path}
-                      className={`text-lg font-medium transition-all duration-300 ${
+                      className={`text-lg font-medium transition-all duration-300 relative ${
                         pathname === link.path
                           ? "text-transparent bg-clip-text bg-[linear-gradient(90deg,#ff0000,#ff5a00,#ff9a00,#ffce00,#ffe808)]"
                           : "text-white hover:text-transparent hover:bg-clip-text hover:bg-[linear-gradient(90deg,#ff0000,#ff5a00,#ff9a00,#ffce00,#ffe808)]"
                       }`}
                     >
                       {link.name}
+                      {/* Stylish underline for mobile menu too */}
+                      <span className={`absolute left-0 -bottom-1 h-[2px] bg-gradient-to-r from-red-500 via-orange-400 to-yellow-400 transition-all duration-300 ${
+                        pathname === link.path ? "w-full" : "w-0"
+                      }`}></span>
                     </Link>
                   ))}
                 </div>

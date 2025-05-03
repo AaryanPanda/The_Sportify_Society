@@ -4,18 +4,19 @@ import { Github, Linkedin, Mail, Filter, Search } from "lucide-react";
 
 export default function TeamMembers() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [positionFilter, setPositionFilter] = useState("all");
+  const [categoryFilter, setCategoryFilter] = useState("Core");
 
-  // Get unique positions
-  const positions = [
+
+  // Get unique categories
+  const categories = [
     "all",
     ...Array.from(
       new Set(
         teamMembers
-          .map((member) => member.position?.trim())
+          .map((member) => member.category?.trim())
           .filter(Boolean)
           .map(
-            (pos) => pos.charAt(0).toUpperCase() + pos.slice(1).toLowerCase()
+            (cat) => cat.charAt(0).toUpperCase() + cat.slice(1).toLowerCase()
           )
       )
     ),
@@ -25,53 +26,54 @@ export default function TeamMembers() {
   const filteredMembers = teamMembers.filter((member) => {
     const matchesSearch =
       member.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      member.position.toLowerCase().includes(searchQuery.toLowerCase());
+      member.category.toLowerCase().includes(searchQuery.toLowerCase());
 
-    const normalizedPosition =
-      member.position &&
-      member.position.charAt(0).toUpperCase() +
-        member.position.slice(1).toLowerCase();
+    const normalizedCategory =
+      member.category &&
+      member.category.charAt(0).toUpperCase() +
+        member.category.slice(1).toLowerCase();
 
-    const matchesPosition =
-      positionFilter === "all" || normalizedPosition === positionFilter;
+    const matchesCategory =
+      categoryFilter === "all" || normalizedCategory === categoryFilter;
 
-    return matchesSearch && matchesPosition;
+    return matchesSearch && matchesCategory;
   });
 
   return (
     <div className="w-full">
       {/* Search + Filter */}
       <div className="flex flex-col md:flex-row gap-4 mb-10">
-        {/* Search */}
-        <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-          <input
-            type="text"
-            placeholder="Search team members..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 rounded-lg bg-[#1a1a1a] text-white placeholder-gray-400 border border-gray-800 focus:outline-none focus:ring-2 focus:ring-[#ff6a00]"
-          />
-        </div>
+  {/* Search */}
+  <div className="relative flex-1">
+    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+    <input
+      type="text"
+      placeholder="Search team members..."
+      value={searchQuery}
+      onChange={(e) => setSearchQuery(e.target.value)}
+      className="w-full pl-10 pr-4 py-2 rounded-lg bg-[#2a2a2a] text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-[#ff8a00]"
+    />
+  </div>
 
-        {/* Position Filter */}
-        <div className="relative md:w-64">
-          <div className="relative">
-            <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-            <select
-              value={positionFilter}
-              onChange={(e) => setPositionFilter(e.target.value)}
-              className="w-full appearance-none pl-10 pr-8 py-2 rounded-lg bg-[#1a1a1a] text-white border border-gray-800 focus:outline-none focus:ring-2 focus:ring-[#ff6a00]"
-            >
-              {positions.map((pos) => (
-                <option key={pos} value={pos}>
-                  {pos === "all" ? "All Positions" : pos}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
-      </div>
+  {/* Category Filter */}
+  <div className="relative md:w-64">
+    <div className="relative">
+      <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+      <select
+        value={categoryFilter}
+        onChange={(e) => setCategoryFilter(e.target.value)}
+        className="w-full appearance-none pl-10 pr-8 py-2 rounded-lg bg-[#2a2a2a] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-[#ff8a00]"
+      >
+        {categories.map((cat) => (
+          <option key={cat} value={cat}>
+            {cat === "all" ? "All Departments" : cat}
+          </option>
+        ))}
+      </select>
+    </div>
+  </div>
+</div>
+
 
       {/* Members List */}
       {filteredMembers.length === 0 ? (
@@ -83,15 +85,33 @@ export default function TeamMembers() {
           {filteredMembers.map((member, index) => (
             <div
               key={member.id}
-              className="bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-xl overflow-hidden shadow-md scroll-reveal transform hover:transition-transform duration-300 hover:shadow-lg"
+              className="relative bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-xl overflow-hidden shadow-md scroll-reveal transform transition-transform duration-300 hover:shadow-lg"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
+              {/* Flame Corner Borders */}
+              <div className="absolute top-0 left-0 w-10 h-10 overflow-hidden">
+                <div className="absolute w-1 h-10 bg-gradient-to-b from-[#ff3c14] via-[#ff8c14] to-transparent opacity-80"></div>
+                <div className="absolute w-10 h-1 bg-gradient-to-r from-[#ff3c14] via-[#ff8c14] to-transparent opacity-80"></div>
+              </div>
+              <div className="absolute top-0 right-0 w-10 h-10 overflow-hidden">
+                <div className="absolute right-0 w-1 h-10 bg-gradient-to-b from-[#ff3c14] via-[#ff8c14] to-transparent opacity-80"></div>
+                <div className="absolute w-10 h-1 bg-gradient-to-r from-transparent via-[#ff8c14] to-[#ff3c14] opacity-80"></div>
+              </div>
+              <div className="absolute bottom-0 left-0 w-10 h-10 overflow-hidden">
+                <div className="absolute bottom-0 w-1 h-10 bg-gradient-to-t from-[#ff3c14] via-[#ff8c14] to-transparent opacity-80"></div>
+                <div className="absolute bottom-0 w-10 h-1 bg-gradient-to-r from-[#ff3c14] via-[#ff8c14] to-transparent opacity-80"></div>
+              </div>
+              <div className="absolute bottom-0 right-0 w-10 h-10 overflow-hidden">
+                <div className="absolute bottom-0 right-0 w-1 h-10 bg-gradient-to-t from-[#ff3c14] via-[#ff8c14] to-transparent opacity-80"></div>
+                <div className="absolute bottom-0 w-10 h-1 bg-gradient-to-r from-transparent via-[#ff8c14] to-[#ff3c14] opacity-80"></div>
+              </div>
+
               {/* Image */}
-              <div className="h-40 relative">
+              <div className="h-56 relative">
                 <img
                   src={member.image || "/placeholder.svg"}
                   alt={member.name}
-                  className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-300"
+                  className="object-cover object-top w-full h-full transition-all duration-300"
                 />
               </div>
 
@@ -100,10 +120,16 @@ export default function TeamMembers() {
                 <h3 className="text-lg font-semibold mb-1 text-white">
                   {member.name}
                 </h3>
-                <p className="text-xs font-medium mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#ff5a00] via-[#ffb700] to-[#ffe808]">
-                  {member.position}
-                </p>
-                <p className="text-gray-300 text-xs leading-snug mb-4 line-clamp-3">
+                <div className="flex flex-col gap-1 mb-3">
+                  <p className="text-gray-300 text-xs font-medium">
+                    {member.position}
+                  </p>
+                  <p className="capitalize text-s font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff5a00] via-[#ffb700] to-[#ffe808]">
+                    {member.category}
+                  </p>
+                </div>
+                <div className="w-30 h-px mx-auto bg-gradient-to-r from-transparent via-[#ff9a00] to-transparent mb-3"></div>
+                <p className="text-gray-400 text-xs leading-snug mb-4 line-clamp-3">
                   {member.bio}
                 </p>
 
