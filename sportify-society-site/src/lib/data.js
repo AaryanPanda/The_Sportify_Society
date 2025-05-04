@@ -128,6 +128,46 @@ export const upcomingEvents = [
         isPast: true,
         tags: ["Independence Day", "Patriotism", "Guest Speaker", "Indian Air Force", "Olympian", "Balidaan", "Sportify"],
       },
+      {
+        id: "past-event-5",
+        title: "Ultimate Sports Quiz",
+        date: "Margazhi’25",
+        time: "Time Not Specified",
+        location: "Location Not Specified",
+        category: "Sports Quiz",
+        description:
+          "Ultimate Sports Quiz was a thrilling battle of wits and reflexes that brought together sports enthusiasts from across the campus. With rounds covering everything from Olympic legends to niche trivia, the event tested participants' knowledge and love for sports to the fullest. The energy was high, the competition fierce, and the winners walked away with glory and prizes. A true celebration of sporting spirit and intellect!",
+        image: "/placeholder.svg?height=400&width=600",
+        isPast: true,
+        tags: ["Sports Quiz", "Olympics", "Trivia", "Competition", "Campus Event", "Sporting Spirit", "Margazhi’25"],
+      },
+      {
+        id: "past-event-2",
+        title: "Ultimate IPL Auction",
+        date: "Date Not Specified",
+        time: "Time Not Specified",
+        location: "Location Not Specified",
+        category: "Cricket Auction",
+        description:
+          "Sportify brought the excitement of the Indian Premier League to campus with the Ultimate IPL Auction! Participants stepped into the shoes of franchise owners, bidding strategically to build their dream teams under a fixed budget. The event was filled with intense bidding wars, clever tactics, and loads of cricket banter. It was a thrilling experience that blended cricket knowledge with strategy and teamwork, making it a crowd favorite.",
+        image: "/placeholder.svg?height=400&width=600",
+        isPast: true,
+        tags: ["IPL", "Auction", "Cricket", "Strategy", "Teamwork", "Sportify", "Campus Event", "Bidding Wars"],
+      },
+      {
+        id: "past-event-7",
+        title: "The Pavilion - Episode 1 with Mr. Kalyan Chaubey",
+        date: "Date Not Specified",
+        time: "Time Not Specified",
+        location: "Location Not Specified",
+        category: "Guest Speaker Session",
+        description:
+          "Sportify proudly hosted the inaugural episode of The Pavilion, featuring Mr. Kalyan Chaubey, President of the All India Football Federation and Joint Secretary of the Indian Olympic Association. In this insightful session, Mr. Chaubey shared his journey, experiences in Indian football, and his vision for the future of sports in India. It was an inspiring start to the series, sparking meaningful conversations among students and sports enthusiasts alike.",
+        image: "/placeholder.svg?height=400&width=600",
+        isPast: true,
+        tags: ["Guest Speaker", "Football", "Indian Sports", "Inspiration", "AIFF", "IOA", "Sportify", "Leadership"],
+      },
+      
       
   ];
   
