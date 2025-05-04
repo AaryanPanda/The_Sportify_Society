@@ -32,7 +32,7 @@ export default function Team() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 bg-gradient-to-br from-black via-[#1a1a1a] to-black dark:bg-gray-950"
+      className="py-20 bg-gradient-to-br from-black via-[#1a1a1a] to-black dark:bg-gray-950 px-16"
       id="team"
     >
       <div className="container mx-auto px-4">
@@ -58,11 +58,11 @@ export default function Team() {
               className="bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-lg overflow-hidden shadow-lg scroll-reveal transform transition-transform duration-300"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="h-64 relative">
+              <div className="h-56 relative">
                 <img
                   src={member.image || "/placeholder.svg"}
                   alt={member.name}
-                  className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-300"
+                  className="object-cover object-top w-full h-full transition-all duration-300"
                 />
               </div>
               <div className="p-6 text-center">
@@ -70,7 +70,6 @@ export default function Team() {
                 <p className="text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#ff5a00] to-[#ffe808] mb-3">
                   {member.position}
                 </p>
-                <p className="text-gray-300 text-sm mb-4">{member.bio}</p>
                 <div className="flex justify-center space-x-3">
                   {member.linkedin && (
                     <a

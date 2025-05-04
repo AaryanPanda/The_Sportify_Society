@@ -51,12 +51,24 @@ export default function Helpdesk() {
       id="helpdesk"
     >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-8 scroll-reveal">
-          <h1 className="text-3xl md:text-4xl font-bold mb-3 text-white">
+        <div className="text-center mb-8 mt-12 scroll-reveal">
+          <h1 className="text-3xl md:text-4xl font-bold mb-3 text-white relative">
             Frequently Asked{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400">
               Questions
             </span>
+            <div className="absolute -bottom-4 left-0 right-0 flex justify-center w-full">
+            <div className="relative h-[2px] w-2/5">
+              {/* Main gradient underline */}
+              <div className="absolute inset-0 h-[2px] bg-gradient-to-r from-transparent via-[#ff5a00] to-transparent rounded-full"></div>
+
+              {/* Glow effect */}
+              <div className="absolute inset-0 h-[1px] bg-gradient-to-r from-red-500 via-orange-400 to-yellow-400 rounded-full blur-sm"></div>
+
+              {/* Extra subtle reflection */}
+              <div className="absolute inset-0 h-[1px] top-[3px] bg-gradient-to-r from-transparent via-white to-transparent opacity-30 blur-[0.5px]"></div>
+            </div>
+          </div>
           </h1>
           <p className="mt-10 text-gray-300 max-w-2xl mx-auto">
             Find answers to common questions about our events, membership, and more. If you can't find what you're looking for, we are here to help!
