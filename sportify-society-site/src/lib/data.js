@@ -309,13 +309,13 @@ export const teamMembers = [
   // Core
   {
     id: "member-1",
-    name: "Darshan Ganatra",
-    position: "Founding Mmber",
+    name: "Himanshu Sharma",
+    position: "Founding Member",
     category: "Founders",
-    bio: "Darshan,  founding member of the society, is known for his excellent communication skills, making him a key player in connecting and collaborating with others.",
-    image: dar,
+    bio: "Himanshu, founding member of the society, brings his sharp sense of humor and kind-hearted nature, creating a fun and welcoming atmosphere for everyone.",
+    image: him,
     linkedin: "https://linkedin.com",
-    email: "rahul@sportify.org",
+    email: "arjun@sportify.org",
   },
   {
     id: "member-2",
@@ -330,13 +330,13 @@ export const teamMembers = [
   },
   {
     id: "member-3",
-    name: "Himanshu Sharma",
-    position: "Founding Member",
+    name: "Darshan Ganatra",
+    position: "Founding Mmber",
     category: "Founders",
-    bio: "Himanshu, founding member of the society, brings his sharp sense of humor and kind-hearted nature, creating a fun and welcoming atmosphere for everyone.",
-    image: him,
+    bio: "Darshan,  founding member of the society, is known for his excellent communication skills, making him a key player in connecting and collaborating with others.",
+    image: dar,
     linkedin: "https://linkedin.com",
-    email: "arjun@sportify.org",
+    email: "rahul@sportify.org",
   },
   {
     id: "member-4",

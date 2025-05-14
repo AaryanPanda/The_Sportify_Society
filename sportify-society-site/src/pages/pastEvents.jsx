@@ -19,7 +19,7 @@ export default function PastEventsPage() {
           Past{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5a00] to-[#ffe808]">Events</span>
           <div className="absolute -bottom-4 left-0 right-0 flex justify-center w-full">
-            <div className="relative h-[2px] w-1/5">
+            <div className="relative h-[2px] w-3/5 sm:w-1/5">
               {/* Main gradient underline */}
               <div className="absolute inset-0 h-[2px] bg-gradient-to-r from-transparent via-[#ff5a00] to-transparent rounded-full"></div>
 

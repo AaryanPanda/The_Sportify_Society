@@ -50,7 +50,7 @@ export default function Helpdesk() {
               Questions
             </span>
             <div className="absolute -bottom-4 left-0 right-0 flex justify-center w-full">
-            <div className="relative h-[2px] w-2/5">
+            <div className="relative h-[2px] w-4/5 sm:w-2/5">
               {/* Main gradient underline */}
               <div className="absolute inset-0 h-[2px] bg-gradient-to-r from-transparent via-[#ff5a00] to-transparent rounded-full"></div>
 

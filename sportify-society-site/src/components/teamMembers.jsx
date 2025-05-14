@@ -14,8 +14,8 @@ import {
 export default function TeamMembersCarousel() {
   // Updated category order - split Core into Founders and Secretaries
   const categoryOrder = [
-    "Founders",
     "Secretaries",
+    "Founders",
     "Event Management",
     "Graphic Design",
     "Web-Ops",
@@ -38,12 +38,104 @@ export default function TeamMembersCarousel() {
   };
 
   // State for active category and active member index
-  const [activeCategory, setActiveCategory] = useState(categoryOrder[1]);
+  const [activeCategory, setActiveCategory] = useState(categoryOrder[0]);
   const [activeMemberIndex, setActiveMemberIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [parallaxOffset, setParallaxOffset] = useState(0);
+  // Refs for scrolling functionality
+  const scrollContainerRef = useRef(null);
+  const [scrollState, setScrollState] = useState({
+    canScrollLeft: false,
+    canScrollRight: true
+  });
 
+  // Calculate if we can scroll in either direction
+  const updateScrollButtons = () => {
+    if (!scrollContainerRef.current) return;
+    
+    const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+    
+    setScrollState({
+      canScrollLeft: scrollLeft > 1,
+      canScrollRight: scrollLeft < scrollWidth - clientWidth - 1
+    });
+  };
+
+  // Initialize scroll state
+  useEffect(() => {
+    updateScrollButtons();
+    window.addEventListener('resize', updateScrollButtons);
+    
+    return () => {
+      window.removeEventListener('resize', updateScrollButtons);
+    };
+  }, []);
+
+  // Smooth scroll to the active category
+  useEffect(() => {
+    if (!scrollContainerRef.current) return;
+    
+    const container = scrollContainerRef.current;
+    const activeElement = container.querySelector(`[data-category="${activeCategory}"]`);
+    
+    if (!activeElement) return;
+    
+    // Calculate the position to center the element
+    const containerRect = container.getBoundingClientRect();
+    const elementRect = activeElement.getBoundingClientRect();
+    
+    const leftPosition = elementRect.left + window.scrollX;
+    const containerLeftPosition = containerRect.left + window.scrollX;
+    
+    const elementCenter = leftPosition + elementRect.width / 2;
+    const containerCenter = containerLeftPosition + containerRect.width / 2;
+    const scrollAmount = elementCenter - containerCenter;
+    
+    container.scrollBy({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+    
+    // Update scroll buttons after scrolling
+    setTimeout(updateScrollButtons, 300);
+  }, [activeCategory]);
+
+  // Scroll handlers
+  const scrollLeft = () => {
+    if (!scrollContainerRef.current || !scrollState.canScrollLeft) return;
+    
+    const container = scrollContainerRef.current;
+    const scrollAmount = container.clientWidth * 0.8;
+    
+    container.scrollBy({
+      left: -scrollAmount,
+      behavior: 'smooth'
+    });
+    
+    // Update scroll buttons after scrolling
+    setTimeout(updateScrollButtons, 300);
+  };
+
+  const scrollRight = () => {
+    if (!scrollContainerRef.current || !scrollState.canScrollRight) return;
+    
+    const container = scrollContainerRef.current;
+    const scrollAmount = container.clientWidth * 0.8;
+    
+    container.scrollBy({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+    
+    // Update scroll buttons after scrolling
+    setTimeout(updateScrollButtons, 300);
+  };
+
+  // Handle container scroll events
+  const handleScroll = () => {
+    updateScrollButtons();
+  };
   const carouselRef = useRef(null);
   const categoryNavRef = useRef(null);
   const containerRef = useRef(null);
@@ -204,14 +296,14 @@ export default function TeamMembersCarousel() {
     >
       {/* Enhanced Navbar with 3D effect and flame accent */}
       <div className="w-full border-b border-orange-900/30 py-2 shadow-lg bg-gradient-to-b from-gray-900 to-black backdrop-blur-md relative">
-        {/* Subtle flame accents for navbar */}
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-600/30 to-transparent"></div>
-        <div className="absolute -bottom-3 left-1/4 w-1 h-3 bg-gradient-to-b from-orange-500/40 to-transparent blur-sm"></div>
-        <div className="absolute -bottom-2 left-2/4 w-1 h-2 bg-gradient-to-b from-orange-500/30 to-transparent blur-sm"></div>
-        <div className="absolute -bottom-4 left-3/4 w-1 h-4 bg-gradient-to-b from-orange-500/50 to-transparent blur-sm"></div>
+      {/* Subtle flame accents for navbar */}
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-600/30 to-transparent"></div>
+      <div className="absolute -bottom-3 left-1/4 w-1 h-3 bg-gradient-to-b from-orange-500/40 to-transparent blur-sm"></div>
+      <div className="absolute -bottom-2 left-2/4 w-1 h-2 bg-gradient-to-b from-orange-500/30 to-transparent blur-sm"></div>
+      <div className="absolute -bottom-4 left-3/4 w-1 h-4 bg-gradient-to-b from-orange-500/50 to-transparent blur-sm"></div>
 
-        <div className="container mx-auto px-4">
-          {/* Mobile toggle button - Enhanced with flame icon */}
+      <div className="container mx-auto px-4">
+        {/* Mobile toggle button - Enhanced with flame icon */}
           <div className="md:hidden flex justify-between items-center py-2">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -237,39 +329,59 @@ export default function TeamMembersCarousel() {
               {/* Corner accents for mobile menu */}
               <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-orange-600/40 rounded-tl-lg"></div>
               <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-orange-600/40 rounded-tr-lg"></div>
-              <div className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-orange-600/40 rounded-bl-lg"></div>
-              <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-orange-600/40 rounded-br-lg"></div>
 
-              {categoryOrder.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => {
-                    setActiveCategory(category);
-                    setIsMobileMenuOpen(false);
-                  }}
-                  className={`block w-full text-left px-4 py-3 transition-all duration-300 ${
-                    activeCategory === category
-                      ? "bg-gradient-to-r from-[#ff5a00] to-[#ffb700] text-white"
-                      : "text-gray-300 hover:text-white hover:bg-gray-800/50"
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
+            {categoryOrder.map((category) => (
+              <button
+                key={category}
+                onClick={() => {
+                  setActiveCategory(category);
+                  setIsMobileMenuOpen(false);
+                }}
+                className={`block w-full text-left px-4 py-3 transition-all duration-300 ${
+                  activeCategory === category
+                    ? "bg-gradient-to-r from-[#ff5a00] to-[#ffb700] text-white"
+                    : "text-gray-300 hover:text-white hover:bg-gray-800/50"
+                }`}
+              >
+                {category}
+              </button>
+            ))}
           </div>
+        </div>
 
-          {/* Desktop horizontal scrolling categories - Enhanced with 3D effects */}
-          <div
-            ref={categoryNavRef}
-            className="hidden md:flex items-center justify-center overflow-x-auto py-2 scrollbar-hide relative"
+        {/* Desktop horizontal scrolling categories with enhanced scroll logic */}
+        <div className="hidden md:flex items-center justify-center relative px-8">
+          {/* Left scroll button - visible only when content is scrollable to the left */}
+          <button 
+            onClick={scrollLeft}
+            disabled={!scrollState.canScrollLeft}
+            className={`absolute left-0 z-10 bg-gray-900/80 text-white rounded-full p-1 backdrop-blur-sm shadow-lg transform transition-all duration-200 ${
+              scrollState.canScrollLeft 
+                ? "opacity-100 hover:bg-gray-800 hover:scale-110 cursor-pointer" 
+                : "opacity-0 pointer-events-none"
+            }`}
+            aria-label="Scroll left"
           >
-            <div className="flex items-center justify-start space-x-1 md:space-x-2 px-1">
+            <ChevronLeft size={20} />
+          </button>
+          
+          {/* Categories container with scroll event handler */}
+          <div
+            ref={scrollContainerRef}
+            onScroll={handleScroll}
+            className="flex items-center justify-start overflow-x-auto py-2 scrollbar-hide w-full"
+            style={{ 
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none'
+            }}
+          >
+            <div className="flex items-center space-x-2 px-4">
               {categoryOrder.map((category) => (
                 <button
                   key={category}
+                  data-category={category}
                   onClick={() => setActiveCategory(category)}
-                  className={`whitespace-nowrap px-3 py-1.5 rounded-lg text-xs md:text-sm font-medium transition-all duration-300 relative ${
+                  className={`whitespace-nowrap px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-300 relative ${
                     activeCategory === category
                       ? "active-category bg-gradient-to-r from-[#ff5a00] to-[#ffb700] text-white shadow-lg shadow-orange-900/30 scale-105"
                       : "text-gray-300 hover:text-white hover:bg-gray-800/50"
@@ -285,8 +397,23 @@ export default function TeamMembersCarousel() {
               ))}
             </div>
           </div>
+          
+          {/* Right scroll button - visible only when content is scrollable to the right */}
+          <button 
+            onClick={scrollRight}
+            disabled={!scrollState.canScrollRight}
+            className={`absolute right-0 z-10 bg-gray-900/80 text-white rounded-full p-1 backdrop-blur-sm shadow-lg transform transition-all duration-200 ${
+              scrollState.canScrollRight 
+                ? "opacity-100 hover:bg-gray-800 hover:scale-110 cursor-pointer" 
+                : "opacity-0 pointer-events-none"
+            }`}
+            aria-label="Scroll right"
+          >
+            <ChevronRight size={20} />
+          </button>
         </div>
       </div>
+    </div>
 
       {/* Main Content: Carousel + Details - with enhanced parallax effect */}
       <div
@@ -320,28 +447,30 @@ export default function TeamMembersCarousel() {
 
         {/* Enhanced Carousel Section with additional flame effects and corner borders */}
         <div className="w-full relative" style={{ height: "min(70vh, 480px)" }}>
-          {/* Navigation Arrows - Enhanced with flame effects */}
+          {/* Navigation Arrows - Responsive size with enhanced flame effects */}
           {!isFirstMember && (
             <button
-              className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-20 bg-black/70 p-2 sm:p-3 rounded-full text-white hover:bg-black/90 transition-all hover:scale-110 border border-gray-800 hover:border-[#ff8c14] group"
+              className="opacity-70 absolute left-2 sm:left-32 top-1/2 -translate-y-1/2 z-20 bg-gradient-to-r from-transparent via-gray-200 to-gray-200/80 backdrop-blur-sm p-2 sm:p-4 rounded-full text-gray-700 hover:bg-white hover:bg-opacity-80 transition-all hover:scale-105 sm:hover:scale-110 border border-gray-300/50 sm:border-2 hover:border-[#ff8c14] group shadow-sm sm:shadow-md"
               onClick={prevMember}
               disabled={isTransitioning}
               aria-label="Previous team member"
             >
-              <ChevronLeft size={20} />
-              <div className="absolute -inset-0.5 bg-orange-500/20 rounded-full opacity-0 group-hover:opacity-100 blur-sm transition-opacity"></div>
+              <ChevronLeft size={20} className="stroke-2 text-gray-700 sm:hidden" />
+              <ChevronLeft size={28} className="stroke-2 text-gray-700 hidden sm:block" />
+              <div className="absolute -inset-1 bg-gradient-to-r from-orange-400/20 to-amber-400/20 rounded-full opacity-0 group-hover:opacity-100 blur-md transition-opacity"></div>
             </button>
           )}
 
           {!isLastMember && (
             <button
-              className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-20 bg-black/70 p-2 sm:p-3 rounded-full text-white hover:bg-black/90 transition-all hover:scale-110 border border-gray-800 hover:border-[#ff8c14] group"
+              className="opacity-70 absolute right-2 sm:right-32 top-1/2 -translate-y-1/2 z-20 bg-gradient-to-l from-transparent via-gray-200 to-gray-200/80 backdrop-blur-sm p-2 sm:p-4 rounded-full text-gray-700 hover:bg-white hover:bg-opacity-80 transition-all hover:scale-105 sm:hover:scale-110 border border-gray-300/50 sm:border-2 hover:border-[#ff8c14] group shadow-sm sm:shadow-md"
               onClick={nextMember}
               disabled={isTransitioning}
               aria-label="Next team member"
             >
-              <ChevronRight size={20} />
-              <div className="absolute -inset-0.5 bg-orange-500/20 rounded-full opacity-0 group-hover:opacity-100 blur-sm transition-opacity"></div>
+              <ChevronRight size={20} className="stroke-2 text-gray-700 sm:hidden" />
+              <ChevronRight size={28} className="stroke-2 text-gray-700 hidden sm:block" />
+              <div className="absolute -inset-1 bg-gradient-to-r from-amber-400/20 to-orange-400/20 rounded-full opacity-0 group-hover:opacity-100 blur-md transition-opacity"></div>
             </button>
           )}
 

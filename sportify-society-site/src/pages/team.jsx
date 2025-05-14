@@ -13,7 +13,7 @@ export default function TeamPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-black via-[#1a1a1a] to-black dark:bg-gray-950 ">
       <Navbar />
-      <div className="container mx-auto px-20 py-16 mt-">
+      <div className="container mx-auto px-10 sm:px-20 py-16">
         {/* Page Header */}
         <h1 className="text-4xl font-bold text-center mb-16 mt-12 text-white relative">
           Our{" "}
@@ -22,7 +22,7 @@ export default function TeamPage() {
           </span>
           {/* Stylish underline with gradient and glow effect */}
           <div className="absolute -bottom-4 left-0 right-0 flex justify-center w-full">
-            <div className="relative h-[2px] w-1/5">
+            <div className="relative h-[2px] w-3/5 sm:w-1/5">
               {/* Main gradient underline */}
               <div className="absolute inset-0 h-[2px] bg-gradient-to-r from-transparent via-[#ff5a00] to-transparent rounded-full"></div>
 
