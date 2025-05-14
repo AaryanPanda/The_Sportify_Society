@@ -4,7 +4,7 @@ import Navbar from '../components/navbar'
 import Hero from '../components/hero'
 import UpcomingEvents from '../components/upcomingEvents'
 import PastEvents from '../components/pastEvents'
-import Team from '../components/team'
+import Team from '../components/joinCommunity'
 import Footer from '../components/footer'
 
 export default function Home() {

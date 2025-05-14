@@ -1,9 +1,9 @@
-// src/UpcomingEventsPage.jsx
 import { useEffect } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import EventsList from "../components/eventsList";
+import EventsList from "../components/upcomingEventsList";
 import { upcomingEvents } from "../lib/data";
+import eventBgImage from "../assets/Event-BG.jpeg";
 
 export default function UpcomingEventsPage() {
   
@@ -28,7 +28,7 @@ export default function UpcomingEventsPage() {
               <div className="absolute inset-0 h-[2px] bg-gradient-to-r from-transparent via-[#ff5a00] to-transparent rounded-full"></div>
 
               {/* Glow effect */}
-              <div className="absolute inset-0 h-[1px] bg-gradient-to-r from-red-500 via-orange-400 to-yellow-400 rounded-full blur-sm"></div>
+              <div className="absolute inset-0 h-[4px] bg-gradient-to-r from-red-900 via-orange-700 to-yellow-400 rounded-full blur-sm"></div>
 
               {/* Extra subtle reflection */}
               <div className="absolute inset-0 h-[1px] top-[3px] bg-gradient-to-r from-transparent via-white to-transparent opacity-30 blur-[0.5px]"></div>
@@ -36,8 +36,22 @@ export default function UpcomingEventsPage() {
           </div>
         </h1>
 
-        {/* Events List */}
-        <EventsList events={upcomingEvents} />
+        {/* Events List with Background Image */}
+        <div className="relative rounded-xl overflow-hidden min-h-[600px] flex justify-center align-middle py-4">
+          {/* Background Image with Overlay */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20 mix-blend-screen"
+            style={{ 
+              backgroundImage: `url(${eventBgImage})`,
+              minHeight: "600px"
+            }} 
+          />
+          
+          {/* Content container */}
+          <div className="relative z-10 p-8">
+            <EventsList events={upcomingEvents} />
+          </div>
+        </div>
       </div>
       <Footer />
     </main>

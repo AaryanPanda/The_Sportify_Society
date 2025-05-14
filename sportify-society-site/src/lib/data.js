@@ -52,179 +52,258 @@ import aar from "../assets/Web/Aaryan.jpg"
 
 
 
+import upEve1 from '../assets/Upcoming -events/Event-1.png'
+import upEve2 from '../assets/Upcoming -events/Event-2.png'
 
+
+import pasEve1 from '../assets/Past-events/Event-1.jpg'
+import pasEve2 from '../assets/Past-events/Event-2.jpg'
+import pasEve3 from '../assets/Past-events/Event-3.png'
+import pasEve4 from '../assets/Past-events/Event-4.png'
+import pasEve5 from '../assets/Past-events/Event-5.png'
+import pasEve6 from '../assets/Past-events/Event-6.png'
+import pasEve7 from '../assets/Past-events/Event-7.jpg'
+import pasEve8 from '../assets/Past-events/Event-8.jpg'
+import pasEve9 from '../assets/Past-events/Event-9.png'
+import pasEve10 from '../assets/Past-events/Event-10.png'
+import pasEve11 from '../assets/Past-events/Event-11.png'
+import pasEve12 from '../assets/Past-events/Event-12.png'
+import pasEve13 from '../assets/Past-events/Event-13.png'
+import pasEve14 from '../assets/Past-events/Event-14.png'
+import pasEve15 from '../assets/Past-events/Event-15.png'
+import pasEve16 from '../assets/Past-events/Event-16.png'
+import pasEve17 from '../assets/Past-events/Event-17.png'
+import pasEve18 from '../assets/Past-events/Event-18.png'
 
 
 export const upcomingEvents = [
   {
     id: "event-1",
-    title: "Annual Cricket Tournament",
-    date: "May 15, 2025",
+    title: "Ultimate Sports Quiz",
+    date: "5 June - 6 June, 2025",
     time: "9:00 AM - 6:00 PM",
-    location: "IIT Madras Cricket Ground",
-    category: "Cricket",
+    location: "BioTech Hall, IIT Madras",
+    deadline: "31 May, 2025",
+    registrationform: "https://www.iitmparadox.org/events/6",
     description:
-      "Join us for our annual cricket tournament featuring teams from various departments. Compete for the prestigious Sportify Cricket Trophy and showcase your cricketing skills.",
-    image: "/placeholder.svg?height=400&width=600",
+      "Get ready to put your sports knowledge to the ultimate test! The Ultimate Sports Quiz at Paradox’25 is a high-energy competition designed for sports lovers. From legendary moments and record-breaking feats to mind-bending trivia, this quiz will challenge even the most passionate fans.",
+    image: upEve1,
   },
   {
     id: "event-2",
-    title: "Basketball Championship",
-    date: "June 5, 2025",
+    title: "Volley Vibes",
+    date: "4 June - 7 June, 2025",
     time: "2:00 PM - 8:00 PM",
-    location: "IIT Madras Sports Complex",
-    category: "Basketball",
+    location: "VolleyBall Court, IIT Madras",
+    deadline: "31 May, 2025",
+    registrationform: "https://www.iitmparadox.org/events/34",
     description:
-      "The most anticipated basketball event of the year is here! Teams will compete in a knockout tournament to determine the campus champions.",
-    image: "/placeholder.svg?height=400&width=600",
-  },
-  {
-    id: "event-3",
-    title: "Football League Kickoff",
-    date: "June 20, 2025",
-    time: "4:00 PM - 7:00 PM",
-    location: "IIT Madras Football Field",
-    category: "Football",
-    description:
-      "The Sportify Football League is back! Join us for the kickoff event and witness exciting matches between departmental teams.",
-    image: "/placeholder.svg?height=400&width=600",
-  },
-  {
-    id: "event-4",
-    title: "Tennis Tournament",
-    date: "July 10, 2025",
-    time: "10:00 AM - 5:00 PM",
-    location: "IIT Madras Tennis Courts",
-    category: "Tennis",
-    description:
-      "Show off your tennis skills in singles and doubles matches. Open to all skill levels with separate categories for beginners and advanced players.",
-    image: "/placeholder.svg?height=400&width=600",
-  },
-  {
-    id: "event-5",
-    title: "Athletics Meet",
-    date: "August 5, 2025",
-    time: "8:00 AM - 6:00 PM",
-    location: "IIT Madras Athletics Track",
-    category: "Athletics",
-    description:
-      "A day full of track and field events including sprints, long-distance running, high jump, long jump, and more. Come participate or cheer for your friends!",
-    image: "/placeholder.svg?height=400&width=600",
-  },
-  {
-    id: "event-6",
-    title: "Badminton Championship",
-    date: "August 20, 2025",
-    time: "9:00 AM - 7:00 PM",
-    location: "IIT Madras Indoor Stadium",
-    category: "Badminton",
-    description:
-      "The annual badminton championship featuring singles and doubles categories. Register now to participate in this exciting event!",
-    image: "/placeholder.svg?height=400&width=600",
-  },
+      "Where the court heats up and the vibes stay cool! Gather your squad and bring the heat – Volley Vibes is not your average volleyball tournament. It’s a full-blown energy fest where power serves, epic saves, and game-changing spikes take center stage. Whether you’re diving for the win or hyping from the sidelines, this is your moment to shine.",
+    image: upEve2,
+  }
 ];
 
 export const pastEvents = [
   {
-
-    id: "past-event-1",
-    title: "Beyond the Goal Post",
-    date: "Date Not Specified",
-    time: "Time Not Specified",
-    location: "Location Not Specified",
-    category: "Football Quiz",
-    description:
-      "Beyond the Goal Post was an exciting football-themed quiz competition hosted by Sportify in collaboration with Nilgiri House and partners. Designed exclusively for BS students, the event challenged participants to decode the beautiful game and prove their football fandom.",
-    image: "/placeholder.svg?height=400&width=600",
-    isPast: true,
-    tags: ["Football", "Quiz", "Competition", "Sportify", "Fandom", "Nilgiri House"],
-  },
-
-  {
-
-    id: "past-event-2",
-    title: "Boundary Blazers",
-    date: "Date Not Specified",
-    time: "Time Not Specified",
-    location: "Location Not Specified",
-    category: "Cricket Quiz",
-    description:
-      "Boundary Blazers was a Cricket Quiz packed with thrilling questions, iconic moments, and fun facts from the world of cricket. Whether you're a casual fan or a cricket nerd, this was the ultimate chance to show off skills and win exciting prizes.",
-    image: "/placeholder.svg?height=400&width=600",
-    isPast: true,
-    tags: ["Cricket", "Quiz", "Competition", "Sports Trivia", "Exciting Prizes", "Fun Facts"],
-  },
-
-  {
-
-    id: "past-event-3",
-    title: "Rings of Glory",
-    date: "July 27-28, 2024",
-    time: "Prelims: 8:00 PM - 10:00 PM | Finale: 7:00 PM - 10:00 PM",
-    location: "Online - Unstop & Google Meet",
-    category: "Olympics Trivia",
-    description:
-      "Rings of Glory was an engaging two-day trivia event that tested participants' knowledge of the Olympic Games. The Prelims were held on 27th July via Unstop from 8–10 PM, followed by the Finale on 28th July conducted on Google Meet from 7–10 PM. The event saw enthusiastic participation from students who competed for glory in this fiery battle of wits and Olympic spirit.",
-    image: "/placeholder.svg?height=400&width=600",
-    isPast: true,
-    tags: ["Olympics", "Trivia", "Competition", "Online Event", "Sports Knowledge", "Battle of Wits"],
-  },
-
-  {
-    id: "past-event-4",
-    title: "Bharat Ke Veer - Remembering the Past, Inspiring the Future",
-    date: "August 11, 2024",
-    time: "Time Not Specified",
-    location: "Online - Google Meet",
-    category: "Patriotic Event",
-    description:
-      "To commemorate Independence Day, Sportify, in collaboration with Balidaan, organized Bharat Ke Veer — a patriotic event dedicated to honoring our heroes and celebrating the spirit of India. The event featured a Guest Speaker Session with JWO Deepak Kumar, an Indian Air Force officer and decorated Olympian, who shared inspiring insights from his journey through international sporting arenas and the armed forces.",
-    image: "/placeholder.svg?height=400&width=600",
-    isPast: true,
-    tags: ["Independence Day", "Patriotism", "Guest Speaker", "Indian Air Force", "Olympian", "Balidaan", "Sportify"],
+    "id": "past-event-1",
+    "title": "The Pavilion - Episode 2 with Prof. Mahesh Panchagnula",
+    "date": "13 May 2025",
+    "location": "Google Meet",
+    "category": "Guest Speaker Session",
+    "description": "Episode 2 featured Prof. Mahesh Panchagnula from IIT Madras discussing the use of technology in sports, data science, and AI in sports analytics.",
+    "image": pasEve1,
+    "isPast": true,
+    "tags": ["Guest Speaker", "Technology", "AI", "Sports Analytics", "IIT Madras"]
   },
   {
-    id: "past-event-5",
-    title: "Ultimate Sports Quiz",
-    date: "Margazhi’25",
-    time: "Time Not Specified",
-    location: "Location Not Specified",
-    category: "Sports Quiz",
-    description:
-      "Ultimate Sports Quiz was a thrilling battle of wits and reflexes that brought together sports enthusiasts from across the campus. With rounds covering everything from Olympic legends to niche trivia, the event tested participants' knowledge and love for sports to the fullest. The energy was high, the competition fierce, and the winners walked away with glory and prizes. A true celebration of sporting spirit and intellect!",
-    image: "/placeholder.svg?height=400&width=600",
-    isPast: true,
-    tags: ["Sports Quiz", "Olympics", "Trivia", "Competition", "Campus Event", "Sporting Spirit", "Margazhi’25"],
+    "id": "past-event-2",
+    "title": "Ultimate IPL Auction",
+    "date": "24-27 April 2025",
+    "location": "Google Meet",
+    "category": "Cricket Auction",
+    "description": "Participants stepped into the shoes of franchise owners, bidding strategically to build their dream teams under a fixed budget. The event was filled with intense bidding wars, clever tactics, and loads of cricket banter.",
+    "image": pasEve2,
+    "isPast": true,
+    "tags": ["IPL", "Auction", "Cricket", "Strategy", "Teamwork", "Sportify", "Bidding"]
   },
   {
-    id: "past-event-2",
-    title: "Ultimate IPL Auction",
-    date: "Date Not Specified",
-    time: "Time Not Specified",
-    location: "Location Not Specified",
-    category: "Cricket Auction",
-    description:
-      "Sportify brought the excitement of the Indian Premier League to campus with the Ultimate IPL Auction! Participants stepped into the shoes of franchise owners, bidding strategically to build their dream teams under a fixed budget. The event was filled with intense bidding wars, clever tactics, and loads of cricket banter. It was a thrilling experience that blended cricket knowledge with strategy and teamwork, making it a crowd favorite.",
-    image: "/placeholder.svg?height=400&width=600",
-    isPast: true,
-    tags: ["IPL", "Auction", "Cricket", "Strategy", "Teamwork", "Sportify", "Campus Event", "Bidding Wars"],
+    "id": "past-event-3",
+    "title": "Watch Party - CSK vs RCB",
+    "date": "28th March 2025",
+    "location": "Google Meet",
+    "category": "Watch Party",
+    "description": "Watch party for the iconic face-off between Chennai Super Kings and Royal Challengers Bangalore. A true rivalry!",
+    "image": pasEve3,
+    "isPast": true,
+    "tags": ["Watch Party", "IPL", "CSK", "RCB", "Cricket"]
   },
   {
-    id: "past-event-7",
-    title: "The Pavilion - Episode 1 with Mr. Kalyan Chaubey",
-    date: "Date Not Specified",
-    time: "Time Not Specified",
-    location: "Location Not Specified",
-    category: "Guest Speaker Session",
-    description:
-      "Sportify proudly hosted the inaugural episode of The Pavilion, featuring Mr. Kalyan Chaubey, President of the All India Football Federation and Joint Secretary of the Indian Olympic Association. In this insightful session, Mr. Chaubey shared his journey, experiences in Indian football, and his vision for the future of sports in India. It was an inspiring start to the series, sparking meaningful conversations among students and sports enthusiasts alike.",
-    image: "/placeholder.svg?height=400&width=600",
-    isPast: true,
-    tags: ["Guest Speaker", "Football", "Indian Sports", "Inspiration", "AIFF", "IOA", "Sportify", "Leadership"],
+    "id": "past-event-4",
+    "title": "Watch Party - DC vs LSG (IPL 2025)",
+    "date": "24th March",
+    "location": " Google Meet",
+    "category": "Watch Party",
+    "description": "An electrifying match between Delhi Capitals and Lucknow Super Giants in IPL 2025 brought fans together for another watch party.",
+    "image": pasEve4,
+    "isPast": true,
+    "tags": ["Watch Party", "IPL 2025", "DC", "LSG", "Cricket"]
   },
+  {
+    "id": "past-event-5",
+    "title": "Watch Party - CSK vs MI (IPL 2025)",
+    "date": "23rd March 2025",
+    "location": " Google Meet ",
+    "category": "Watch Party",
+    "description": "Fans of CSK and MI gathered for a heated IPL 2025 rivalry clash. Cheers, chants, and cricket fever all night.",
+    "image": pasEve5,
+    "isPast": true,
+    "tags": ["Watch Party", "IPL", "CSK", "MI", "Cricket"]
+  },
+  {
+    "id": "past-event-6",
+    "title": "Movie Night - Maidaan (with Pixels N Panels)",
+    "date": "16th March 2025",
+    "location": " Google Meet ",
+    "category": "Movie Night",
+    "description": "In collaboration with Pixels N Panels, Sportify presented *Maidaan* — a tribute to Indian football legends and unsung heroes.",
+    "image": pasEve6,
+    "isPast": true,
+    "tags": ["Movie Night", "Maidaan", "Football", "Indian Cinema", "Collaboration"]
+  },
+  {
+    "id": "past-event-7",
+    "title": "Watch Party - India vs New Zealand (ICC Finals)",
+    "date": "9th March 2025",
+    "location": " Google Meet ",
+    "category": "Watch Party",
+    "description": "The ICC Finals saw an electrifying watch party as India faced New Zealand. An unforgettable showdown.",
+    "image": pasEve7,
+    "isPast": true,
+    "tags": ["Watch Party", "ICC Final", "India", "New Zealand", "Cricket"]
+  },
+  {
+    "id": "past-event-8",
+    "title": "Watch Party - India vs Australia (Champions Trophy Semi Final)",
+    "date": "4th March 2025",
+    "location": " Google Meet ",
+    "category": "Watch Party",
+    "description": "Semi-final fever! Fans watched India take on Australia in the high-stakes Champions Trophy semi-final.",
+    "image": pasEve8,
+    "isPast": true,
+    "tags": ["Watch Party", "Semi Final", "India", "Australia", "Champions Trophy"]
+  },
+  {
+    "id": "past-event-9",
+    "title": "Watch Party - India vs Pakistan (Champions Trophy)",
+    "date": "23 February 2025",
+    "location": "Google Meet",
+    "category": "Watch Party",
+    "description": "Another epic clash! Students gathered to watch India face Pakistan in the Champions Trophy.",
+    "image": pasEve9,
+    "isPast": true,
+    "tags": ["Watch Party", "India", "Pakistan", "Champions Trophy", "Cricket"]
+  },
+  {
+    "id": "past-event-10",
+    "title": "The Pavilion - Episode 1 with Mr. Kalyan Chaubey",
+    "date": "9 February 2025",
+    "location": "Google Meet",
+    "category": "Guest Speaker Session",
+    "description": "Sportify proudly hosted the inaugural episode of The Pavilion, featuring Mr. Kalyan Chaubey, President of the All India Football Federation and Joint Secretary of the Indian Olympic Association. He shared his journey, experiences in Indian football, and his vision for the future of sports in India.",
+    "image": pasEve10,
+    "isPast": true,
+    "tags": ["Guest Speaker", "Football", "AIFF", "IOA", "Inspiration", "Leadership"]
+  },
+  {
+    "id": "past-event-11",
+    "title": "Ultimate Sports Quiz Margazhi’25",
+    "date": "4-7 Jan 2025",
+    "location": "Google Meet",
+    "category": "Sports Quiz",
+    "description": "Ultimate Sports Quiz, a thrilling battle of wits and reflexes that brought together sports enthusiasts from across the campus. With rounds covering everything from Olympic legends to niche trivia, the event tested participants' knowledge and love for sports to the fullest.",
+    "image": pasEve11,
+    "isPast": true,
+    "tags": ["Sports", "Quiz", "Competition", "Trivia", "Campus", "Margazhi’25"]
+  },
+  {
+    "id": "past-event-12",
+    "title": "Boundary Blazers",
+    "date": "18-19 Nov 2024",
+    "location": "Google meet",
+    "category": "Cricket Quiz",
+    "description": "Boundary Blazers is a Cricket Quiz packed with thrilling questions, iconic moments, and fun facts from the world of cricket. Whether you're a casual fan or a cricket nerd, this is your chance to show off your skills and win exciting prizes.",
+    "image": pasEve12,
+    "isPast": true,
+    "tags": ["Cricket", "Quiz", "Trivia", "Fun", "Competition"]
+  },
+  {
+    "id": "past-event-13",
+    "title": "Beyond the Goal Post",
+    "date": "13-14 November 2024",
+    "location": "Google Meet",
+    "category": "Football Quiz",
+    "description": "Beyond the Goal Post was an exciting football-themed quiz competition hosted by Sportify in collaboration with Nilgiri House and other partners. Designed exclusively for BS students, the event challenged participants to decode the beautiful game and prove their football fandom.",
+    "image": pasEve13,
+    "isPast": true,
+    "tags": ["Football", "Quiz", "Sportify", "BS Students", "Nilgiri House"]
+  },
+  {
+    "id": "past-event-14",
+    "title": "Delhi Meetup - India vs Germany Hockey",
+    "date": "23 October 2024",
+    "location": "Major Dhyan Chand National Stadium, New Delhi",
+    "category": "Meetup",
+    "description": "Sportify Society hosted a meetup to cheer on the Indian National Hockey Team during the India vs Germany Hockey Bilateral Series. The event united sports-loving students for live support of the home team.",
+    "image": pasEve14,
+    "isPast": true,
+    "tags": ["Hockey", "Meetup", "Live Event", "India vs Germany", "Cheer"]
+  },
+  {
+    "id": "past-event-15",
+    "title": "Watch Party - India vs Pakistan (Women's T20 WC)",
+    "date": "6th October 2024",
+    "location": "Google Meet",
+    "category": "Watch Party",
+    "description": "Sportify hosted a watch party for the exciting clash between India and Pakistan in the Women's T20 World Cup.",
+    "image": pasEve15,
+    "isPast": true,
+    "tags": ["Watch Party", "Cricket", "India", "Pakistan", "Women's T20 WC"]
+  },
+  {
+    "id": "past-event-16",
+    "title": "Bharat Ke Veer - Remembering the Past, Inspiring the Future",
+    "date": "11 August 2024",
+    "location": "Google Meet",
+    "category": "Patriotic Event",
+    "description": "To commemorate Independence Day, Sportify, in collaboration with Balidaan, organized Bharat Ke Veer — a patriotic event dedicated to honoring our heroes. The event featured a guest session with JWO Deepak Kumar, an Indian Air Force officer and Olympian.",
+    "image": pasEve16,
+    "isPast": true,
+    "tags": ["Independence Day", "Patriotism", "Guest Speaker", "IAF", "Olympian", "Balidaan"]
+  },
+  {
+    "id": "past-event-17",
+    "title": "Rings of Glory",
+    "date": "27-28 July 2024",
+    "location": "Unstop & Google Meet",
+    "category": "Olympics Trivia",
+    "description": "Rings of Glory was an engaging two-day trivia event that tested participants' knowledge of the Olympic Games. Prelims were held on 27th July via Unstop, followed by the Finale on 28th July via Google Meet.",
+    "image": pasEve17,
+    "isPast": true,
+    "tags": ["Olympics", "Trivia", "Online", "Wits", "Unstop"]
+  },
+  {
+    "id": "past-event-18",
+    "title": "Movie Night - Chandu Champion",
+    "date": "21 September 2024",
+    "location": " Google Meet ",
+    "category": "Movie Night",
+    "description": "Sportify hosted a movie night screening of *Chandu Champion*, inspiring audiences through a powerful sports narrative.",
+    "image": pasEve18,
+    "isPast": true,
+    "tags": ["Movie Night", "Chandu Champion", "Motivation", "Inspiration", "Cinema"]
+  }
+]
 
-
-];
 
 export const teamMembers = [
   // Core
@@ -429,9 +508,9 @@ export const teamMembers = [
     category: "Web-Ops",
     bio: "Aaryan, the tech brain behind the Sportify website, weaves code like magic—making sure the digital side of Sportify looks sharp, smooth, and spectacular!",
     image: aar,
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    email: "nisha@sportify.org",
+    linkedin: "https://www.linkedin.com/in/aaryan-panda-55224629a/",
+    github: "https://github.com/AaryanPanda",
+    email: "aaryanpanda04@gmail.com",
   },
   {
     id: "member-20",
@@ -772,23 +851,31 @@ export const teamMembers = [
 
 export const getFAQs = () => [
   {
-    question: "How can I register for events?",
-    answer: "You can register for events by visiting the event page and clicking the 'Register' button."
+    question: "What is Sportify ?",
+    answer: "The Sportify Society is a society of IITM BS degree dedicated to uplifting the sporting spirit. By joining us you’ll have access to anything and everything related to sports."
   },
   {
-    question: "How do I become a member?",
-    answer: "You can join by signing up on our membership page, where you'll need to provide your details."
+    question: "How to become a member ?",
+    answer: "You can join us by filling up our membership form, https://bit.ly/THESportifymembershipform"
   },
   {
-    question: "What types of events do you host?",
-    answer: "We host various events including competitions, training sessions, and social meetups."
+    question: "Does Sportify host sports meet-ups ?",
+    answer: "Yes, we host regional sports meet-ups. Become a member to never miss a meet-up in your region!"
   },
   {
-    question: "Can I sponsor an event?",
-    answer: "Yes, you can sponsor our events. Please contact us via the contact form for more details."
+    question: "How to become a core member of Sportify ?",
+    answer: "You can fill the form for the recruitment once it opens, you’ll be assigned with tasks based on the field you choose and will be interviewed based on it. Upon thorough scrutiny you’ll be hired."
   },
   {
-    question: "What is the refund policy?",
-    answer: "We offer a full refund if you cancel your registration at least 7 days before the event."
+    question: "What are the perks of joining Sportify ?",
+    answer: "You’ll have access to exclusive watch parties of major sporting events, sports inspired movies and guest speaker sessions with renowned professionals in the field. Also you can take part in our sports discussions along with many individuals who are passionate about sports and of course you’ll be the first one to receive updates on our regional meet-ups!"
+  },
+  {
+    question: "How to stay updated with Sportify society events?",
+    answer: "Join the official WhatsApp group or check student email regularly and Also follow our Instagram for latest updates."
+  },
+  {
+    question: "What are the unique initiatives of Sportify society?",
+    answer: "We publish 'The Podium' a monthly newsletter which covers national, international and our degree related sports news. We also host the 'The Ultimate Sports Quiz', our flagship event that challenges the participants knowledge across all sports."
   },
 ];

@@ -6,14 +6,6 @@ export default function Helpdesk() {
   const faqs = getFAQs(); // Retrieve FAQs from data.js
   const sectionRef = useRef(null);
 
-  // Adding the extra FAQ item for "What to do if I don't find my answer?"
-  const additionalFAQ = {
-    question: "What should I do if I don't find my answer in the FAQ?",
-    answer: "If you couldn't find the information you were looking for in the FAQ, don't worry! You can contact our team directly for assistance:\n\n• Phone: +123 456 7890 (John Doe - Support)\n• Email: support@ourclub.com\n• Phone: +987 654 3210 (Jane Smith - Help Desk)\n• Email: help@ourclub.com\n\nFeel free to reach out during our business hours (Mon-Fri, 9 AM - 6 PM). We are here to assist you!"
-  };
-
-  // Add the additional FAQ item to the existing FAQs
-  const updatedFAQs = [...faqs, additionalFAQ];
 
   // State to track which FAQ is open
   const [openFAQ, setOpenFAQ] = useState(null);
@@ -79,7 +71,7 @@ export default function Helpdesk() {
           <Card className="overflow-hidden border-2 border-gradient rounded-lg shadow-xl bg-gradient-to-br from-black to-[#151515] text-white">
             <CardContent className="py-6 px-4 md:px-6">
               <div className="space-y-4">
-                {updatedFAQs.map((faq, index) => (
+                {faqs.map((faq, index) => (
                   <div key={index} className="border border-gray-800 rounded-md overflow-hidden scroll-reveal hover:shadow-xl transition-shadow duration-300" style={{ transitionDelay: `${index * 50}ms` }}>
                     <div 
                       className="flex justify-between items-center p-4 bg-gradient-to-r from-[#111] to-[#222] cursor-pointer"

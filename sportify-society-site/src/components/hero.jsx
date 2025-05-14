@@ -5,7 +5,6 @@ import { Flame } from "lucide-react";
 import logo from "../assets/sportify_logo1.png";
 import { Link } from "react-router-dom";
 
-
 export default function Hero() {
   const heroRef = useRef(null);
 
@@ -97,28 +96,33 @@ export default function Hero() {
           that celebrates athleticism, teamwork, and the undying spirit of
           competition.
         </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-red-400 via-orange-400 to-yellow-300 text-black font-semibold hover:brightness-110 hover:shadow-yellow-300/40 focus:outline-none transition-all transform active:scale-95 flex items-center space-x-2"
+        <div className="flex flex-col sm:flex-row sm:justify-center gap-4 w-full">
+          {/* Join Sportify Button (Google Form Link) */}
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf-uGRSW6krWftInt8yia8iFajoLbrwqBHiBnq6ZfKyclV7DA/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto"
           >
-            <Flame className="h-5 w-5" />
-            <span>Join Sportify</span>
-          </Button>
+            <Button
+              size="lg"
+              className="w-full sm:w-auto bg-gradient-to-r from-red-400 via-orange-400 to-yellow-300 text-black font-semibold hover:brightness-110 hover:shadow-yellow-300/40 focus:outline-none transition-all transform active:scale-95 flex items-center justify-center space-x-2"
+            >
+              <Flame className="h-5 w-5" />
+              <span>Join Sportify</span>
+            </Button>
+          </a>
 
-          <div className="p-[2px] rounded-md bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400 inline-block">
-          <Link to="/upcoming-events" className="w-full h-full">
-  <Button
-    size="lg"
-    className="bg-black text-amber-500 font-semibold w-full h-full
-               hover:brightness-110 hover:shadow-yellow-300/40 
-               focus:outline-none active:outline-none 
-               transform active:scale-95
-               rounded-md transition-colors duration-200"
-  >
-    Explore Events
-  </Button>
-</Link>
+          {/* Explore Events Button (Internal Link) */}
+          <div className="w-full sm:w-auto p-[2px] rounded-md bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400">
+            <Link to="/upcoming-events" className="block w-full h-full">
+              <Button
+                size="lg"
+                className="w-full sm:w-auto bg-black text-amber-500 font-semibold hover:brightness-110 hover:shadow-yellow-300/40 focus:outline-none active:outline-none transform active:scale-95 rounded-md transition-colors duration-200 flex items-center justify-center"
+              >
+                Explore Events
+              </Button>
+            </Link>
           </div>
         </div>
       </motion.div>
