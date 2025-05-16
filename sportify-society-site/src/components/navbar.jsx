@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
@@ -8,6 +8,7 @@ const navLinks = [
   { name: "Home", path: "/" },
   { name: "Upcoming Events", path: "/upcoming-events" },
   { name: "Past Events", path: "/past-events" },
+  { name: "The Podium", path: "/the-podium" },
   { name: "Team", path: "/team" },
   { name: "Helpdesk", path: "/helpdesk" },
 ];
@@ -31,7 +32,9 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-black/90 backdrop-blur-md shadow-lg" : "bg-black/90 backdrop-blur-md shadow-lg"
+        isScrolled
+          ? "bg-black/90 backdrop-blur-md shadow-lg"
+          : "bg-black/90 backdrop-blur-md shadow-lg"
       }`}
     >
       {/* Stylish white reflection border that's thicker in center and fades to edges */}
@@ -53,7 +56,7 @@ const Navbar = () => {
              focus-visible:outline-none focus-visible:ring-0"
           >
             <img
-              src={logo}
+              src={logo || "/placeholder.svg"}
               alt="Sportify Logo"
               className="w-10 h-10 md:w-12 md:h-12"
             />
@@ -76,14 +79,17 @@ const Navbar = () => {
                   }`}
                 >
                   {link.name}
-                  
+
                   {/* Enhanced hover effect with flame gradient underline */}
-                  <span className={`absolute left-0 -bottom-0 h-[2px] bg-gradient-to-r from-red-500 via-orange-400 to-yellow-400 rounded-full transition-all duration-300 ${
-                    pathname === link.path ? "w-full" : "w-0 group-hover:w-full"
-                  }`}></span>
-                  
+                  <span
+                    className={`absolute left-0 -bottom-0 h-[2px] bg-gradient-to-r from-red-500 via-orange-400 to-yellow-400 rounded-full transition-all duration-300 ${
+                      pathname === link.path
+                        ? "w-full"
+                        : "w-0 group-hover:w-full"
+                    }`}
+                  ></span>
+
                   {/* Subtle glow effect on hover */}
-                  
                 </Link>
               ))}
             </nav>
@@ -108,9 +114,11 @@ const Navbar = () => {
                     >
                       {link.name}
                       {/* Stylish underline for mobile menu too */}
-                      <span className={`absolute left-0 -bottom-1 h-[2px] bg-gradient-to-r from-red-500 via-orange-400 to-yellow-400 transition-all duration-300 ${
-                        pathname === link.path ? "w-full" : "w-0"
-                      }`}></span>
+                      <span
+                        className={`absolute left-0 -bottom-1 h-[2px] bg-gradient-to-r from-red-500 via-orange-400 to-yellow-400 transition-all duration-300 ${
+                          pathname === link.path ? "w-full" : "w-0"
+                        }`}
+                      ></span>
                     </Link>
                   ))}
                 </div>
@@ -118,7 +126,7 @@ const Navbar = () => {
             </Sheet>
           </div>
         </div>
-      </div>  
+      </div>
     </header>
   );
 };

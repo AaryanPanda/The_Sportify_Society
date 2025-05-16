@@ -60,7 +60,7 @@ export default function PastEvents() {
                 <img
                   src={event.image || "/placeholder.svg"}
                   alt={event.title}
-                  className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-300"
+                  className="object-cover w-full h-full transition-all duration-300"
                 />
               </div>
 

@@ -849,6 +849,94 @@ export const teamMembers = [
 ];
 
 
+const newsletterData = [
+    {
+    "id": 10,
+    "edition": 10,
+    "month": "May 2025",
+    "highlights": "Record-breaking IPL 2025; 14-year-old Vaibhav Suryavanshi shines; Cricket added to LA 2028 Olympics; Barcelona wins Copa del Rey; Liverpool crowned EPL champions; Mohun Bagan completes ISL double.",
+    "aboutEdition": "An electrifying month with IPL records, Olympic milestones, and European football triumphs.",
+    "pdfLink": "https://drive.google.com/file/d/1Nh1mwp8xhXeI0xZlfJtvgUIhBRaooXs8/preview"
+  },
+  {
+    "id": 9,
+    "edition": 9,
+    "month": "April 2025",
+    "highlights": "India wins ICC Champions Trophy; Mumbai Indians win WPL; Newcastle wins Carabao Cup; ISL playoffs lineup confirmed; Lando Norris wins Australian GP.",
+    "aboutEdition": "India dominates international cricket while football and F1 bring thrilling finishes.",
+    "pdfLink": "https://drive.google.com/file/d/1HtDjQsMGsq65QerMm96hnqIuHSsGw7eb/preview"
+  },
+  {
+    "id": 8,
+    "edition": 8,
+    "month": "March 2025",
+    "highlights": "Special feature on women in sports and the rise of esports in India. MI Cape Town wins SA20; India sweeps England 3-0 in ODIs; Mohun Bagan defends ISL Shield; new 8-second rule for goalkeepers.",
+    "aboutEdition": "Celebrating women and esports while India and MI Cape Town sweep cricket titles.",
+    "pdfLink": "https://drive.google.com/file/d/11cspYSw8KfaJhkl3ovoqTo6XdfsGAPGc/preview"
+  },
+  {
+    "id": 7,
+    "edition": 7,
+    "month": "February 2025",
+    "highlights": "India wins ICC U19 Women’s T20 WC; Jasprit Bumrah and Amelia Kerr sweep ICC Awards; Premier League transfer window highlights; Barcelona wins Supercopa; AC Milan wins Italian Super Cup.",
+    "aboutEdition": "Youth cricket shines with global awards and European clubs bag silverware.",
+    "pdfLink": "https://drive.google.com/file/d/1s6_q060o0iesQsvk7Ia5zzTkE6f94uq9/preview"
+  },
+  {
+    "id": 6,
+    "edition": 6,
+    "month": "January 2025",
+    "highlights": "Australia leads Border-Gavaskar Trophy; South Africa qualifies for WTC Final; Real Madrid wins Intercontinental Cup; McLaren wins Constructors’ Title after 26 years; Verstappen wins 4th F1 title.",
+    "aboutEdition": "Historic victories across cricket, football, and Formula 1 mark a power-packed month.",
+    "pdfLink": "https://drive.google.com/file/d/1noy-x0saVjjC47I10_C3ByssZQbfYaMi/preview"
+  },
+  {
+    "id": 5,
+    "edition": 5,
+    "month": "December 2024",
+    "highlights": "India wins 1st Test at Perth; wins T20 series vs South Africa; Deccan Gladiators win T10 League; historic IPL 2025 auction; Messi-led Argentina to play in Kerala.",
+    "aboutEdition": "India’s cricket dominance and IPL auction drama headline this festive sports season.",
+    "pdfLink": "https://drive.google.com/file/d/1aWhOHsZeGRz9O4jm5p-pmHADnhGzR65A/preview"
+  },
+  {
+    "id": 4,
+    "edition": 4,
+    "month": "November 2024",
+    "highlights": "New Zealand wins Women’s T20 WC; IPL 2025 retention rules updated; Barcelona breaks Real’s streak in El Clásico; Messi’s Inter Miami breaks MLS points record.",
+    "aboutEdition": "Milestone moments in cricket, football, and revamped IPL dynamics take center stage.",
+    "pdfLink": "https://drive.google.com/file/d/1Lidfdr7Md6WX4ZzEDgwjDqwoWOVXEhtW/preview"
+  },
+  {
+    "id": 3,
+    "edition": 3,
+    "month": "October 2024",
+    "highlights": "Sri Lanka sweeps NZ in Test series; Afghanistan wins ODI series vs SA; India wins Test series vs Bangladesh; UEFA Nations League and UCL highlights.",
+    "aboutEdition": "Cricketing upsets and football’s top leagues ignite global sporting fervor.",
+    "pdfLink": "https://drive.google.com/file/d/1tTGRm21ENJ7-F-CbPm59ZQWSc-ZRkbpI/preview"
+  },
+  {
+    "id": 2,
+    "edition": 2,
+    "month": "September 2024",
+    "highlights": "Rahul Dravid appointed RR coach; Women's T20 WC moved to UAE; Sri Lanka beats India in ODIs; Paris Olympics and Durand Cup updates.",
+    "aboutEdition": "Big decisions shape cricket and Olympic landscapes, with India facing surprises.",
+    "pdfLink": "https://drive.google.com/file/d/1cd2EoysvIYio6SQWrJRprL2Tra2HC_a4/preview"
+  },
+  {
+    "id": 1,
+    "edition": 1,
+    "month": "August 2024",
+    "highlights": "Newsletter format starts - general updates on sports and upcoming events (edition content minimal).",
+    "aboutEdition": "The inaugural issue kickstarts Sportify’s journey with a preview of sports coverage ahead.",
+    "pdfLink": "https://drive.google.com/file/d/1TofTOLGD1HbonjcX9JTr16HogDsmK3HS/preview"
+  }
+
+
+]
+
+export default newsletterData
+
+
 export const getFAQs = () => [
   {
     question: "What is Sportify ?",
