@@ -29,7 +29,7 @@ export default function Footer() {
                 className="mr-3 drop-shadow-md"
               />
               <h3 className="text-2xl font-extrabold tracking-wide text-[#f8f8f8]">
-                THE Sportify
+                THE SPORTIFY
               </h3>
             </div>
 
@@ -89,7 +89,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-6 text-sm text-gray-500 flex flex-col justify-between items-center">
           <p className="mb-4 md:mb-0">
             © {currentYear}{" "}
-            <span className="text-white font-semibold">THE Sportify</span>. All
+            <span className="text-white font-semibold">THE SPORTIFY</span>. All
             rights reserved.
           </p>
         </div>

@@ -21,7 +21,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-20 px-4">
+    <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-12 px-4">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <div
@@ -39,9 +39,9 @@ export default function Hero() {
         {[
           { top: "33%", left: "25%" },
           { top: "50%", right: "33%" },
-          { bottom: "25%", left: "13%" },
+          { bottom: "27%", left: "13%" },
           { top: "25%", right: "20%" },
-          { bottom: "20%", right: "15%" },
+          { bottom: "30%", right: "15%" },
         ].map((pos, index) => (
           <div
             key={index}
@@ -66,7 +66,7 @@ export default function Hero() {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
-        className="relative z-10 animate-float mb-8"
+        className="relative z-10 animate-float mb-2"
       >
         <div className="w-40 h-40 md:w-56 md:h-56">
           <img
@@ -83,7 +83,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-center z-10 max-w-3xl"
+        className="text-center z-10 max-w-5xl"
       >
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
           Spreading the{" "}
@@ -91,7 +91,7 @@ export default function Hero() {
             Flame of Sports
           </span>
         </h1>
-        <p className="text-lg md:text-xl text-gray-300 mb-8">
+        <p className="text-lg md:text-xl text-gray-300 mb-12">
           Join IIT Madras BS Degree Sports Society and be part of a community
           that celebrates athleticism, teamwork, and the undying spirit of
           competition.

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import NewsletterComponent from "../components/newComp"
+import NewsletterComponent from "../components/ThePodium"
 
 export default function ThePodiumPage() {
   // Scroll to the top of the page whenever the route changes

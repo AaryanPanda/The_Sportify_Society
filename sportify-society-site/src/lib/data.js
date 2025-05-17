@@ -320,7 +320,7 @@ export const teamMembers = [
   {
     id: "member-2",
     name: "Debajit Das",
-    position: "Founding Mmber",
+    position: "Founding Member",
     category: "Founders",
     bio: "Debajit, Founding Member of Sportify Club and Head of Sponsorship, is passionate about promoting sports culture and inspiring the younger generation to engage with sports.",
     image: deb,
@@ -331,7 +331,7 @@ export const teamMembers = [
   {
     id: "member-3",
     name: "Darshan Ganatra",
-    position: "Founding Mmber",
+    position: "Founding Member",
     category: "Founders",
     bio: "Darshan,  founding member of the society, is known for his excellent communication skills, making him a key player in connecting and collaborating with others.",
     image: dar,
@@ -363,9 +363,9 @@ export const teamMembers = [
   {
     id: "member-6",
     name: "Vaibhav Kumar",
-    position: "Head",
+    position: "Lead",
     category: "Event Management",
-    bio: "Vaibhav, the Event Management Head of the society, has great managing skills and ensures every event runs smoothly! ",
+    bio: "Vaibhav, the Event Management Lead of the society, has great managing skills and ensures every event runs smoothly! ",
     image: vai,
     linkedin: "https://linkedin.com",
     github: "https://github.com",
@@ -373,10 +373,10 @@ export const teamMembers = [
   },
   {
     id: "member-7",
-    name: "Dhanashree Pawar",
+    name: "Dhanashri Pawar",
     position: "Team Member",
     category: "Event Management",
-    bio: "Dhanashree, a member of the event management team, plays a supporting yet important role, always ready to step in and lend a hand when needed.",
+    bio: "Dhanashri, a member of the event management team, plays a supporting yet important role, always ready to step in and lend a hand when needed.",
     image: dha,
     linkedin: "https://linkedin.com",
     email: "vikram@sportify.org",
@@ -441,9 +441,9 @@ export const teamMembers = [
   {
     id: "member-13",
     name: "Aakash Rawal",
-    position: "Head",
+    position: "Lead",
     category: "Graphic Design",
-    bio: "Aakash, the Design Head of the society, adds color, style, and a dash of magic to everything he touches — one design at a time!",
+    bio: "Aakash, the Design Lead of the society, adds color, style, and a dash of magic to everything he touches — one design at a time!",
     image: aak,
     linkedin: "https://linkedin.com",
     github: "https://github.com",
@@ -504,7 +504,7 @@ export const teamMembers = [
   {
     id: "member-19",
     name: "Aaryan Panda",
-    position: "Head",
+    position: "Lead",
     category: "Web-Ops",
     bio: "Aaryan, the tech brain behind the Sportify website, weaves code like magic—making sure the digital side of Sportify looks sharp, smooth, and spectacular!",
     image: aar,
@@ -538,9 +538,9 @@ export const teamMembers = [
   {
     id: "member-22",
     name: "Aakarsh Bahukhandi",
-    position: "Head",
+    position: "Lead",
     category: "PR & Outreach",
-    bio: "Aakarsh, the Head of PR and Outreach in the society, excels at building connections and spreading the word, making sure everyone knows what’s happening!",
+    bio: "Aakarsh, the Lead of PR and Outreach in the society, excels at building connections and spreading the word, making sure everyone knows what’s happening!",
     image: aaka,
     linkedin: "https://linkedin.com",
     email: "tanya@sportify.org",
@@ -627,7 +627,7 @@ export const teamMembers = [
   },
   {
     id: "member-31",
-    name: "Susuwara",
+    name: "Suswara Pochampally",
     position: "Team Member",
     category: "PR & Outreach",
     bio: "Suswara, a talented member of the PR and Outreach team, brings her hosting expertise to the forefront, turning every event into a captivating experience.",
@@ -672,9 +672,9 @@ export const teamMembers = [
   {
     id: "member-35",
     name: "Abdul Gani Suhaib B",
-    position: "Head",
+    position: "Lead",
     category: "Research & Publication",
-    bio: "Abdul, the Head of Research, Publication, and Quiz Team, dives deep into knowledge, creating insightful content and organizing quizzes that challenge and engage!",
+    bio: "Abdul, the Lead of Research, Publication, and Quiz Team, dives deep into knowledge, creating insightful content and organizing quizzes that challenge and engage!",
     image: abdul,
     linkedin: "https://linkedin.com",
     email: "devansh@sportify.org",
@@ -753,10 +753,10 @@ export const teamMembers = [
   // Documentation and Content
   {
     id: "member-43",
-    name: "Balaji GKM",
-    position: "Head",
+    name: "Baalaji G K M",
+    position: "Lead",
     category: "Content & Documentation",
-    bio: "Balaji, the Head of the Documentation Team, keeps everything organized and ensures every important moment is captured and remembered!",
+    bio: "Baalaji, the Lead of the Documentation Team, keeps everything organized and ensures every important moment is captured and remembered!",
     image: bala,
     linkedin: "https://linkedin.com",
     email: "lavanya@sportify.org",
@@ -850,7 +850,7 @@ export const teamMembers = [
 
 
 const newsletterData = [
-    {
+  {
     "id": 10,
     "edition": 10,
     "month": "May 2025",

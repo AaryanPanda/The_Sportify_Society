@@ -61,7 +61,7 @@ const Navbar = () => {
               className="w-10 h-10 md:w-12 md:h-12"
             />
             <span className="font-bold text-xl md:text-2xl text-white">
-              THE Sportify
+              THE SPORTIFY
             </span>
           </Link>
 
