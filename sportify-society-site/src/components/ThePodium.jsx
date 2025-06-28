@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Calendar, Star, Award } from "lucide-react";
-import newsletterData from "../lib/data.js";
+import {newsletterData} from "../lib/data.js";
 
 const NewsletterComponent = () => {
   const [currentEdition, setCurrentEdition] = useState(0);

@@ -15,7 +15,7 @@ export default function PastEventsPage() {
       <Navbar />
       <div className="container mx-auto px-4 md:px-8 lg:px-20 py-16">
         {/* Page Header */}
-        <h1 className="text-4xl font-bold text-center mb-16 mt-12 text-white relative">
+        <h1 className="text-4xl font-bold text-center mt-12 text-white relative">
           Past{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5a00] to-[#ffe808]">Events</span>
           <div className="absolute -bottom-4 left-0 right-0 flex justify-center w-full">

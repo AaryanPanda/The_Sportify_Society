@@ -4,6 +4,7 @@ import Footer from "../components/footer";
 import EventsList from "../components/upcomingEventsList";
 import { upcomingEvents } from "../lib/data";
 import eventBgImage from "../assets/Event-BG.jpeg";
+import Loader from "../components/loader"; // ✅ Import the new Loader component
 
 export default function UpcomingEventsPage() {
   
@@ -47,7 +48,8 @@ export default function UpcomingEventsPage() {
           
           {/* Content container */}
           <div className="relative z-10 p-8">
-            <EventsList events={upcomingEvents} />
+            <Loader />
+            {/* <EventsList events={upcomingEvents} /> */}
           </div>
         </div>
       </div>

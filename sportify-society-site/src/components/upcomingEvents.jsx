@@ -1,9 +1,9 @@
 // src/components/UpcomingEvents.jsx
-
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { upcomingEvents } from "../lib/data";
 import EventsList from "./upcomingEventsList"; // ✅ Reuse the list component
+import Loader from "./loader"; // ✅ Import the new Loader component
 import { Button } from "../ui/buttons";
 
 export default function UpcomingEvents() {
@@ -50,12 +50,18 @@ export default function UpcomingEvents() {
           </p>
         </div>
 
-        {/* ✅ Use EventsList and only show 3 events */}
+        {/* ✅ Show Loader instead of events list */}
+        <div className="scroll-reveal">
+          <Loader />
+        </div>
+
+        {/* ✅ Commented out events list - uncomment when events are available */}
+        {/* 
         <div className="scroll-reveal">
           <EventsList events={upcomingEvents.slice(0, 3)} />
         </div>
 
-        {/* View All Events Button */}
+        View All Events Button
         <div className="text-center mt-12 scroll-reveal flex items-center justify-center">
           <Link to="/upcoming-events">
             <Button className="px-6 py-3 text-white font-medium rounded-lg bg-[#cc4e00] hover:bg-[#e65c00] active:bg-[#b34000] transition-all shadow-md hover:shadow-lg flex items-center justify-center">
@@ -63,6 +69,7 @@ export default function UpcomingEvents() {
             </Button>
           </Link>
         </div>
+        */}
       </div>
     </section>
   );
