@@ -53,11 +53,6 @@ import prak from '../assets/Web/Prakhar.png'
 import aar from "../assets/Web/Aaryan.jpg"
 
 
-
-import upEve1 from '../assets/Upcoming -events/Event-1.png'
-import upEve2 from '../assets/Upcoming -events/Event-2.png'
-
-
 import pasEve1 from '../assets/Past-events/Event-1.jpg'
 import pasEve2 from '../assets/Past-events/Event-2.jpg'
 import pasEve3 from '../assets/Past-events/Event-3.png'
@@ -76,36 +71,39 @@ import pasEve15 from '../assets/Past-events/Event-15.png'
 import pasEve16 from '../assets/Past-events/Event-16.png'
 import pasEve17 from '../assets/Past-events/Event-17.png'
 import pasEve18 from '../assets/Past-events/Event-18.png'
+import pasEve19 from '../assets/Past-events//Event-19.png'
+import pasEve20 from '../assets/Past-events/Event-20.png'
 
 
 export const upcomingEvents = [
-  {
-    id: "event-1",
-    title: "Ultimate Sports Quiz",
-    date: "5 June - 6 June, 2025",
-    time: "9:00 AM - 6:00 PM",
-    location: "BioTech Hall, IIT Madras",
-    deadline: "31 May, 2025",
-    registrationform: "https://www.iitmparadox.org/events/6",
-    description:
-      "Get ready to put your sports knowledge to the ultimate test! The Ultimate Sports Quiz at Paradox’25 is a high-energy competition designed for sports lovers. From legendary moments and record-breaking feats to mind-bending trivia, this quiz will challenge even the most passionate fans.",
-    image: upEve1,
-  },
-  {
-    id: "event-2",
-    title: "Volley Vibes",
-    date: "4 June - 7 June, 2025",
-    time: "2:00 PM - 8:00 PM",
-    location: "VolleyBall Court, IIT Madras",
-    deadline: "31 May, 2025",
-    registrationform: "https://www.iitmparadox.org/events/34",
-    description:
-      "Where the court heats up and the vibes stay cool! Gather your squad and bring the heat – Volley Vibes is not your average volleyball tournament. It’s a full-blown energy fest where power serves, epic saves, and game-changing spikes take center stage. Whether you’re diving for the win or hyping from the sidelines, this is your moment to shine.",
-    image: upEve2,
-  }
+  
 ];
 
 export const pastEvents = [
+
+   {
+    "id": "past-event-2",
+    "title": "Ultimate Sports Quiz",
+    "date": "5 June - 6 June, 2025",
+    "location": "BioTech Hall, IIT Madras",
+    "category": "Quiz Competition",
+    "description": "Get ready to put your sports knowledge to the ultimate test! The Ultimate Sports Quiz at Paradox’25 is a high-energy competition designed for sports lovers. From legendary moments and record-breaking feats to mind-bending trivia, this quiz will challenge even the most passionate fans.",
+    "image": pasEve19,
+    "isPast": true,
+    "tags": ["Quiz", "Sports", "Trivia", "Paradox’25"]
+  },
+  {
+    "id": "past-event-3",
+    "title": "Volley Vibes",
+    "date": "4 June - 7 June, 2025",
+    "location": "VolleyBall Court, IIT Madras",
+    "category": "Sports Tournament",
+    "description": "Where the court heats up and the vibes stay cool! Gather your squad and bring the heat – Volley Vibes is not your average volleyball tournament. It’s a full-blown energy fest where power serves, epic saves, and game-changing spikes take center stage. Whether you’re diving for the win or hyping from the sidelines, this is your moment to shine.",
+    "image": pasEve20,
+    "isPast": true,
+    "tags": ["Volleyball", "Sports", "Tournament", "Paradox’25"]
+  },
+
   {
     "id": "past-event-1",
     "title": "The Pavilion - Episode 2 with Prof. Mahesh Panchagnula",
@@ -799,6 +797,14 @@ export const teamMembers = [
 
 
 export const newsletterData = [
+  {
+    "id": 11,
+    "edition": 11,
+    "month": "June 2025",
+    "highlights": "Record-breaking performances across global sporting events; emerging stars and legendary finishes; transfer buzz in European football; Paris Olympics preparations ramp up.",
+    "aboutEdition": "A thrilling mid-year recap spotlighting rising talents, tournament drama, and Olympic buildup.",
+    "pdfLink": "https://drive.google.com/file/d/1W4yXksUgULYfJXx6AfckXgjqai-cWAMb/preview"
+  },
   {
     "id": 10,
     "edition": 10,
