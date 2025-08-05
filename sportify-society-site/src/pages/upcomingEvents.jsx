@@ -48,8 +48,8 @@ export default function UpcomingEventsPage() {
           
           {/* Content container */}
           <div className="relative z-10 p-8">
-            <Loader />
-            {/* <EventsList events={upcomingEvents} /> */}
+            {/* <Loader /> */}
+            <EventsList events={upcomingEvents} />
           </div>
         </div>
       </div>

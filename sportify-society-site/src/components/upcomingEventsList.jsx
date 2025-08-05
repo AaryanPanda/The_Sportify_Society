@@ -27,7 +27,7 @@ export default function EventsList({ events }) {
             <img
               src={event.image || "/placeholder.svg"}
               alt={event.title}
-              className="object-cover object-center w-full h-full scale-100 transition-all duration-500 ease-out group-hover:scale-105 group-hover:brightness-110"
+              className="object-contain object-center w-full h-full scale-100 transition-all duration-500 ease-out group-hover:scale-105 group-hover:brightness-110"
             />
 
             {/* Subtle Overlay Gradient for Better Text Visibility */}
@@ -59,7 +59,14 @@ export default function EventsList({ events }) {
               </div>
               <div className="flex items-center text-gray-100 group-hover:text-[#ff9a00] transition-colors duration-300">
                 <MapPin className="h-4 w-4 mr-1.5" />
-                <span className="text-sm truncate">{event.location}</span>
+                <a
+                  href={event.meetlink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm truncate hover:text-blue-300 underline"
+                >
+                  {event.location}
+                </a>
               </div>
             </div>
 

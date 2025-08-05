@@ -75,13 +75,26 @@ import pasEve19 from '../assets/Past-events//Event-19.png'
 import pasEve20 from '../assets/Past-events/Event-20.png'
 
 
+import upEve1 from "../assets/Upcoming -events/Eve-1.png"
+
 export const upcomingEvents = [
-  
+  {
+    "id": 1,
+    "title": "Pavilion Series III - Sunaina Rekhi",
+    "image": upEve1,
+    "deadline": "Aug 6, 2025",
+    "date": "Aug 6, 2025",
+    "location": "Online (Google Meet)",
+    "description": "In the III part of the Pavilion Series, we bring you a very special guest Sunaina Rekhi, UN Yoga Representative, Mind-Body Expert & Global Wellness Voice 🌍. Don’t miss this enlightening session focused on wellness and the mind-body connection.",
+    "registrationform": "https://forms.gle/twWSF5f4MWAN4pW76",
+    "time": "6 PM onwards",
+    "meetlink": "https://meet.google.com/cys-pabw-gkc"
+  }
 ];
 
 export const pastEvents = [
 
-   {
+  {
     "id": "past-event-2",
     "title": "Ultimate Sports Quiz",
     "date": "5 June - 6 June, 2025",
