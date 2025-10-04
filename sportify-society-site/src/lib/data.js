@@ -73,27 +73,73 @@ import pasEve17 from '../assets/Past-events/Event-17.png'
 import pasEve18 from '../assets/Past-events/Event-18.png'
 import pasEve19 from '../assets/Past-events//Event-19.png'
 import pasEve20 from '../assets/Past-events/Event-20.png'
+import pasEve21 from "../assets/Past-events/Eve-21.png"
+import pasEve22 from '../assets/Past-events/Event-22.jpeg'
+import pasEve23 from '../assets/Past-events/Event-23.jpeg'
+import pasEve24 from '../assets/Past-events/Event-24.jpeg'
+import pasEve25 from '../assets/Past-events/Event-25.jpeg'
 
 
-import upEve1 from "../assets/Upcoming -events/Eve-1.png"
 
 export const upcomingEvents = [
-  {
-    "id": 1,
-    "title": "Pavilion Series III - Sunaina Rekhi",
-    "image": upEve1,
-    "deadline": "Aug 6, 2025",
-    "date": "Aug 6, 2025",
-    "location": "Online (Google Meet)",
-    "description": "In the III part of the Pavilion Series, we bring you a very special guest Sunaina Rekhi, UN Yoga Representative, Mind-Body Expert & Global Wellness Voice 🌍. Don’t miss this enlightening session focused on wellness and the mind-body connection.",
-    "registrationform": "https://forms.gle/twWSF5f4MWAN4pW76",
-    "time": "6 PM onwards",
-    "meetlink": "https://meet.google.com/cys-pabw-gkc"
-  }
 ];
 
 export const pastEvents = [
-
+  {
+    "id": "event-1",
+    "title": "Ultimate IPL Auction Saavan'25",
+    "date": "17 September - 21 September, 2025",
+    "location": "Google Meet",
+    "category": "Strategy Competition",
+    "description": "The IPL Auction Competition is an exciting event where participants will play the role of team managers, bidding for players to assemble a balanced, competitive IPL team within a set budget. The event recreates the strategy and intensity of a real IPL auction, encouraging teams to analyze player stats, set bidding strategies, and make quick financial decisions. This experience is designed for Cricket fans and those interested in strategy and team management, offering a fun, competitive challenge that involves teamwork, critical thinking, and budget management.",
+    "image": pasEve25,
+    "isPast": true,
+    "tags": ["Cricket", "Auction", "Strategy", "Teamwork"]
+  },
+  {
+    "id": "event-2",
+    "title": "Ultimate Sports Quiz Saavan ’25",
+    "date": "17 September - 21 September, 2025",
+    "location": "Google Meet",
+    "category": "Quiz Competition",
+    "description": "The Ultimate Sports Quiz Saavan ‘25, an electrifying test of your sporting knowledge and quick thinking for all sports enthusiasts and trivia buffs. Prepare to tackle a range of questions, from obscure sports facts to iconic athletes, as you navigate through a series of mind-bending challenges and vie for the esteemed title of 'Sports Trivia Master.'",
+    "image": pasEve24,
+    "isPast": true,
+    "tags": ["Quiz", "Sports", "Trivia", "Saavan ’25"]
+  },
+  {
+    "id": "event-3",
+    "title": "The Traitors Saavan'25",
+    "date": "17 September - 19 September, 2025",
+    "location": "Google Meet",
+    "category": "Mind Game",
+    "description": "The Traitors is a high-energy mind game where wit meets deception. Participants must solve riddles, bluff opponents, and expose hidden traitors in a battle of strategy and trust. An inter-house showdown of logic, psychology, and house pride.",
+    "image": pasEve23,
+    "isPast": true,
+    "tags": ["Strategy", "Logic", "Mind Games", "Psychology"]
+  },
+  {
+    "id": "event-4",
+    "title": "B2B: Back 2 Bachpan Saavan'25",
+    "date": "18 September - 21 September, 2025",
+    "location": "Google Meet",
+    "category": "Fun & Games",
+    "description": "B2B: Back 2 Bachpan is a fun-filled, competitive event designed to revive childhood nostalgia through a mix of sports, playful activities, and engaging challenges. From online games to creative and interactive rounds, the event ensures equal focus on knowledge, strategy, and fun.",
+    "image": pasEve22,
+    "isPast": true,
+    "tags": ["Fun", "Games", "Nostalgia", "Competition"]
+  },
+  {
+    "id": "event-5",
+    "title": "Pavilion Series III - Sunaina Rekhi",
+    "date": "6 August, 2025",
+    "location": "Google Meet",
+    "category": "Wellness & Mind-Body",
+    "description": "In the III part of the Pavilion Series, we bring you a very special guest Sunaina Rekhi, UN Yoga Representative, Mind-Body Expert & Global Wellness Voice 🌍. Don’t miss this enlightening session focused on wellness and the mind-body connection.",
+    "image": pasEve21,
+    "isPast": true,
+    "tags": ["Wellness", "Yoga", "Mind-Body", "Pavilion Series"]
+  },
   {
     "id": "past-event-2",
     "title": "Ultimate Sports Quiz",
