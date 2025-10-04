@@ -857,6 +857,30 @@ export const teamMembers = [
 
 export const newsletterData = [
   {
+    "id": 14,
+    "edition": 14,
+    "month": "September 2025",
+    "highlights": "Asia Cup cricket kicks off in UAE; Neeraj Chopra runner-up in Diamond League; India dominates Commonwealth Weightlifting; Marc Márquez extends MotoGP streak; record-breaking moments in athletics and shooting; Animesh Kujur’s meteoric rise as sprint star.",
+    "aboutEdition": "September highlighted Asia Cup cricket drama, India’s medal hauls in weightlifting, athletics, and shooting, along with Neeraj Chopra’s continued consistency. Animesh Kujur’s national records and Marc Márquez’s MotoGP dominance rounded off a month of sporting excellence.",
+    "pdfLink": "https://drive.google.com/file/d/1sXt1FA-UG93YrKD1n8_j4VeplsqeIRPY/preview"
+  },
+  {
+    "id": 13,
+    "edition": 13,
+    "month": "August 2025",
+    "highlights": "South Africa–Australia cricket rivalry delivers thrilling ODI/T20I contests; Hundred Men’s and Women’s titles decided; record Premier League transfer window; PSG win UEFA Super Cup; India’s youth shine across boxing, athletics, wrestling, and more.",
+    "aboutEdition": "August delivered non-stop sporting action: cricket clashes in Australia, football’s record-breaking transfers, PSG’s UEFA Super Cup, Northern Superchargers’ women’s title win, and India’s medal rush in boxing, athletics, and beyond.",
+    "pdfLink": "https://drive.google.com/file/d/1jaG2iR7proYGbMQkn_Lx4QxUm9j-7w0u/preview"
+  },
+  {
+    "id": 12,
+    "edition": 12,
+    "month": "July 2025",
+    "highlights": "South Africa lifts their maiden ICC World Test Championship; RCB finally win IPL after 18 years; England’s epic 371-run chase vs India; PSG claim first UCL title; Suruchi Singh dominates world shooting with consecutive golds.",
+    "aboutEdition": "A historic month of firsts — South Africa breaking their ICC title drought, RCB’s long-awaited IPL triumph, England’s stunning Test chase, PSG’s UCL glory, and Suruchi Singh emerging as India’s next shooting superstar.",
+    "pdfLink": "https://drive.google.com/file/d/1dRFS5_-MZtlO8ESs0w9Cyy4yPR25o1yu/preview"
+  },
+  {
     "id": 11,
     "edition": 11,
     "month": "June 2025",

@@ -6,7 +6,7 @@ import logo from "../assets/sportify_logo1.png";
 
 const navLinks = [
   { name: "Home", path: "/" },
-  { name: "Upcoming Events", path: "/upcoming-events" },
+  { name: "Featured Events", path: "/featured-events" },
   { name: "Past Events", path: "/past-events" },
   { name: "The Podium", path: "/the-podium" },
   { name: "Team", path: "/team" },

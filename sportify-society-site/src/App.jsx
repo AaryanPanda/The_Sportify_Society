@@ -6,6 +6,7 @@ import PastEvents from "./pages/pastEvents";
 import Team from "./pages/team";
 import Helpdesk from "./pages/helpdesk";
 import Newsletter from "./pages/newsletter";
+import FeaturedEvents from "./pages/featuredEvents";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/upcoming-events" element={<UpcomingEvents />} />
+        <Route path="/featured-events" element={<FeaturedEvents />} />
         <Route path="/past-events" element={<PastEvents />} />
         <Route path="/team" element={<Team />} />
         <Route path="/helpdesk" element={<Helpdesk />} />

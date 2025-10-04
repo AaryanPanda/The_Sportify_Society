@@ -270,7 +270,7 @@ export default function JoinCommunity() {
                 </span>
                 <div className="w-8 h-1 bg-gradient-to-l from-transparent to-[#ffe808] opacity-50 ml-3"></div>
               </div>
-              <p className="text-gray-300">
+              <p className="text-gray-200 text-sm ml-6 ">
                 Want to be part of something bigger? Join our community to stay
                 updated, share feedback, and help shape the future of our
                 platform.
