@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "../ui/buttons";
 import { MessageCircle, ArrowRight, UserPlus } from "lucide-react";
+import meetupBG from "../assets/MeetupBG.png";
 
 export default function JoinCommunity() {
   const sectionRef = useRef(null);
@@ -95,9 +96,17 @@ export default function JoinCommunity() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 bg-gradient-to-br from-black via-[#1a1a1a] to-black dark:bg-gray-950 px-4 md:px-16"
+      className="py-20 bg-gradient-to-br from-black via-[#1a1a1a] to-black dark:bg-gray-950 px-4 md:px-16 relative"
       id="community"
+      style={{
+        backgroundImage: `url(${meetupBG})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        zIndex: 1,
+      }}
     >
+      
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16 scroll-reveal">
