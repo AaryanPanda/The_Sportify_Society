@@ -90,8 +90,7 @@ export default function FeaturedEventsPage() {
           {/* The Pavilion - Episode 2 with Prof. Mahesh Panchagnula */}
           <div className="bg-gradient-to-t from-[#232526] via-[#414345]/50 to-[#232526]/10 rounded-2xl shadow-xl border border-gray-700 p-6 flex flex-col items-center w-full max-w-sm mx-auto md:mx-0" style={{boxSizing: 'border-box'}}>
             <div className="w-36 pt-1 pb-1 h-44 flex items-center justify-center rounded-xl mb-4 shadow-[0_0_20px_8px_rgba(35,37,38,0.95),0_0_40px_12px_rgba(35,37,38,0.7)] overflow-hidden group">
-                {/* Replace with actual image if available */}
-                <img src={featEve3} alt="The Pavilion - Episode 2" className="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-105 rounded-2xl" />
+                <img src={featEve3} alt="The Pavilion - Episode 2" className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105 rounded-2xl" />
             </div>
             <div className="w-full flex flex-col items-center">
               <h3 className="text-lg font-bold text-white mb-1 text-center">The Pavilion - Episode 2 </h3>

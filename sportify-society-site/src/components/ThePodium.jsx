@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Calendar, Star, Award } from "lucide-react";
-import {newsletterData} from "../lib/data.js";
+import { newsletterData } from "../lib/data.js";
 
 const NewsletterComponent = () => {
   const [currentEdition, setCurrentEdition] = useState(0);
@@ -22,12 +22,17 @@ const NewsletterComponent = () => {
   const currentNewsletter = newsletterData[currentEdition];
 
   return (
-    <div className="relative w-full min-h-screen bg-gradient-to-b from-gray-900 to-black pt-16 pb-16 px-4 md:px-8 rounded">
+    <div
+      className="relative w-full min-h-screen pt-4 pb-4 md:pt-10 md:pb-10 px-4 md:px-8 rounded"
+      style={{
+        background: "transparent",
+      }}
+    >
       {/* Top-left corner border */}
-      <div className="absolute top-0 left-0 w-32 h-32">
+      {/* <div className="absolute top-0 left-0 w-32 h-32">
         <div className="absolute top-0 left-0 w-1 h-32 bg-gradient-to-b from-red-500 via-orange-400 to-transparent rounded-tl"></div>
         <div className="absolute top-0 left-0 w-32 h-1 bg-gradient-to-r from-red-500 via-orange-400 to-transparent rounded-tl"></div>
-      </div>
+      </div> */}
 
       {/* Top-right corner border */}
       <div className="absolute top-0 right-0 w-32 h-32">
@@ -42,13 +47,19 @@ const NewsletterComponent = () => {
       </div>
 
       {/* Bottom-right corner border */}
-      <div className="absolute bottom-0 right-0 w-32 h-32">
+      {/* <div className="absolute bottom-0 right-0 w-32 h-32">
         <div className="absolute bottom-0 right-0 w-1 h-32 bg-gradient-to-t from-red-500 via-orange-400 to-transparent rounded-br"></div>
         <div className="absolute bottom-0 right-0 w-32 h-1 bg-gradient-to-r from-transparent via-orange-400 to-red-500 rounded-br"></div>
-      </div>
+      </div> */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Left Section - Introduction and Carousel */}
-        <div className="lg:col-span-5 bg-gray-900/80 backdrop-blur-md rounded-3xl p-6 shadow-xl border border-gray-800 overflow-hidden hover:border-gray-700 transition-all duration-300">
+        <div
+          className="lg:col-span-5 backdrop-blur-md rounded-3xl p-6 shadow-xl overflow-hidden hover:border-gray-800 transition-all duration-300"
+          style={{
+            backgroundColor: "rgba(17, 24, 39, 0.6)", // gray-900 at 70% opacity
+            border: "2px solid rgba(31, 41, 55, 1)", // gray-800 border, 2px thick
+          }}
+        >
           <div className="space-y-6">
             {/* Welcome text with improved typography */}
             <div className="space-y-6">
@@ -158,7 +169,13 @@ const NewsletterComponent = () => {
         </div>
 
         {/* Right Section - Newsletter PDF Viewer */}
-        <div className="lg:col-span-7 bg-gray-900/80 backdrop-blur-md rounded-3xl shadow-xl border border-gray-800 overflow-hidden hover:border-gray-700 transition-all duration-300 flex flex-col">
+        <div
+          className="lg:col-span-7 bg-gray-900/80 backdrop-blur-md rounded-3xl shadow-xl border border-gray-800 overflow-hidden hover:border-gray-700 transition-all duration-300 flex flex-col"
+          style={{
+            backgroundColor: "rgba(17, 24, 39, 0.6)",
+            border: "2px solid rgba(31, 41, 55, 1)", 
+          }}
+        >
           {/* Header bar */}
           <div className="bg-black/40 p-6 border-b border-gray-800">
             <div className="flex items-center justify-between">
@@ -213,7 +230,10 @@ const NewsletterComponent = () => {
               <Star className="h-5 w-5 text-yellow-400 mr-2" />
               About this edition
             </h3>
-            <p className="text-gray-300 line-clamp-3" style={{ minHeight: '4.6rem' }}>
+            <p
+              className="text-gray-300 line-clamp-3"
+              style={{ minHeight: "4.6rem" }}
+            >
               {currentNewsletter.highlights}
             </p>
           </div>

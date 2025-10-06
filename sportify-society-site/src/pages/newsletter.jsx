@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import NewsletterComponent from "../components/ThePodium"
+import podiumBG from '../assets/PodiumBG.jpeg';
 
 export default function ThePodiumPage() {
   // Scroll to the top of the page whenever the route changes
@@ -10,7 +11,14 @@ export default function ThePodiumPage() {
   }, []); // Dependency array ensures this happens on route change
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-black via-[#1a1a1a] to-black dark:bg-gray-950">
+    <main className="min-h-screen bg-gradient-to-br from-black via-[#1a1a1a] to-black dark:bg-gray-950"
+    style={{
+                  backgroundImage: `url(${podiumBG})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                  zIndex: 1,    
+                }}>
       <Navbar />
       <div className="container mx-auto px-4 md:px-8 lg:px-20 py-16">
         {/* Page Header */}
