@@ -857,6 +857,14 @@ export const teamMembers = [
 
 export const newsletterData = [
   {
+    "id": 15,
+    "edition": 15,
+    "month": "October 2025",
+    "highlights": "India wins ninth Asia Cup title in a thrilling final; Marc Márquez secures seventh MotoGP crown; Aitana Bonmati and Ousmane Dembele lift Ballon d’Or titles; Anandkumar Velkumar becomes India’s first world champion in speed skating; India dominates ISSF Junior World Cup; historic achievements in hockey, boxing, and wushu mark a golden month for Indian sport.",
+    "aboutEdition": "October 2025 was a landmark month for Indian and world sports — from India’s record ninth Asia Cup win to Anandkumar Velkumar’s double world golds in speed skating. The Ballon d’Or honored Ousmane Dembele and Aitana Bonmati, while Marc Márquez extended his MotoGP legacy. Indian athletes excelled globally across boxing, shooting, hockey, judo, and wushu. This edition also celebrates Sportify’s vibrant events and profiles the inspiring journey of Anandkumar Velkumar, Sportify’s Personality of the Month.",
+    "pdfLink": "https://drive.google.com/file/d/1g9zMjtG6x_75C4gO6d_rZIx71zG8afNB/preview"
+  },
+  {
     "id": 14,
     "edition": 14,
     "month": "September 2025",

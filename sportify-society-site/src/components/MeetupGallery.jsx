@@ -30,7 +30,7 @@ export default function MeetupsGallery() {
 
   return (
     <section
-      className="pt-[4rem] pb-[6rem] bg-gradient-to-br from-black via-[#1a1a1a] to-black dark:bg-gray-950 px-4 md:px-16"
+      className="pt-[4rem] pb-[6rem] bg-gradient-to-br from-black via-[#1a1a1a] to-black dark:bg-gray-950 px-4 md:px-16 overflow-hidden sm:overflow-visible relative"
       id="meetups-gallery"
       style={{
               backgroundImage: `url(${meetupBG})`,

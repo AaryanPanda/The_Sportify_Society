@@ -6,7 +6,9 @@ import { upcomingEvents as featuredEvents } from "../lib/data";
 import eventBgImage from "../assets/Event-BG.jpeg";
 import featEve1 from "../assets/Featured-events/Event-1.jpg";
 import featEve2 from "../assets/Featured-events/Event-2.png";
+import featEve3 from "../assets/Featured-events/Event-3.jpg"; // You may need to add this image if not present
 import Loader from "../components/loader"; // ✅ Import the new Loader component
+import featurepagebg from "../assets/FeaturePageBG.jpeg";
 
 export default function FeaturedEventsPage() {
   
@@ -16,7 +18,14 @@ export default function FeaturedEventsPage() {
   }, []); // Dependency on location ensures this happens on route change
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-black via-[#1a1a1a] to-black dark:bg-gray-950">
+    <main className="min-h-screen bg-gradient-to-br from-black via-[#1a1a1a] to-black dark:bg-gray-950"
+    style={{
+              backgroundImage: `url(${featurepagebg})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              zIndex: 1,
+            }}>
       <Navbar />
       <div className="container mx-auto px-4 sm:px-10 py-10 md:py-16">
         {/* New Header Section */}
@@ -41,42 +50,59 @@ export default function FeaturedEventsPage() {
         </div>
 
         {/* Card-based Featured Events List */}
-        <div className="flex flex-col md:flex-row gap-10 justify-center items-stretch">
+        <div className="flex flex-col md:flex-row gap-6 justify-center items-stretch">
           {/* Ultimate IPL Auction */}
-          <div className="bg-gradient-to-r from-[#ff5a00]/40 via-[#ffe808]/20 to-[#ffae00]/40 rounded-2xl shadow-xl border border-orange-300 p-10 flex flex-col items-center w-full max-w-2xl md:max-w-xl mx-auto md:mx-0" style={{boxSizing: 'border-box'}}>
-            <div className="w-64 pt-1 pb-1 h-64 flex items-center justify-center bg-orange-300 rounded-xl mb-6 border-2 border-orange-400 shadow-lg overflow-hidden group" style={{boxShadow: 'inset 0 0 48px 0 rgba(0,0,0,0.32)'}}>
+          <div className="bg-gradient-to-t from-[#232526] via-[#414345]/30 to-[#232526]/10 rounded-2xl shadow-xl border border-gray-700 p-6 flex flex-col items-center w-full max-w-sm mx-auto md:mx-0" style={{boxSizing: 'border-box'}}>
+            <div className="w-36 pt-1 pb-1 h-44 flex items-center justify-center rounded-xl mb-4 shadow-[0_0_20px_8px_rgba(35,37,38,0.95),0_0_40px_12px_rgba(35,37,38,0.7)] overflow-hidden group">
                 <img src={featEve1} alt="Ultimate IPL Auction" className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105 rounded-2xl" />
             </div>
             <div className="w-full flex flex-col items-center">
-              <h3 className="text-2xl font-bold text-white mb-1 text-center">Ultimate IPL Auction</h3>
-              <span className="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-[#ff5a00]/80 to-[#ffe808]/80 text-black text-xs font-semibold mb-3 w-fit">Strategy Competition</span>
-              <p className="text-orange-100 text-base mb-2 text-center">24 April - 27 April, 2025 &bull; Google Meet</p>
-              <p className="text-gray-200 text-xs mb-6 text-center">Participants stepped into the shoes of franchise owners, bidding strategically to build their dream teams under a fixed budget. The event was filled with intense bidding wars, clever tactics, and loads of cricket banter.</p>
+              <h3 className="text-lg font-bold text-white mb-1 text-center">Ultimate IPL Auction</h3>
+              <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-[#ff5a00]/80 to-[#ffe808]/80 text-black text-xs font-semibold mb-3 w-fit">Strategy Competition</span>
+              <p className="text-orange-100 text-sm mb-4 text-center">24 April - 27 April, 2025 &bull; Google Meet</p>
+              <p className="text-white text-xs mb-6 mt-2 text-center">Participants stepped into the shoes of franchise owners, bidding strategically to build their dream teams under a fixed budget. The event was filled with intense bidding wars, clever tactics, and loads of cricket.</p>
               <div className="flex flex-wrap gap-2 justify-center">
                 {['Cricket', 'Auction', 'Strategy', 'Teamwork'].map(tag => (
-                  <span key={tag} className="px-3 py-1 rounded-full bg-[#181818] text-orange-300 text-xs font-medium border border-orange-700/40">{tag}</span>
+                  <span key={tag} className="px-2 py-1 rounded-full bg-[#181818] text-orange-300 text-xs font-medium border border-orange-700/40">{tag}</span>
                 ))}
               </div>
-              {/* Past Event tag removed */}
             </div>
           </div>
 
           {/* Ultimate Sports Quiz */}
-          <div className="bg-gradient-to-r from-[#ffae00]/40 via-[#ffe808]/20 to-[#ff5a00]/40 rounded-2xl shadow-xl border border-orange-300 p-10 flex flex-col items-center w-full max-w-2xl md:max-w-xl mx-auto md:mx-0" style={{boxSizing: 'border-box'}}>
-            <div className="w-64 pt-1 pb-1 h-64 flex items-center justify-center bg-orange-300 rounded-xl mb-6 border-2 border-orange-400 shadow-lg overflow-hidden group" style={{boxShadow: 'inset 0 0 48px 0 rgba(0,0,0,0.32)'}}>
+          <div className="bg-gradient-to-t from-[#232526] via-[#414345]/50 to-[#232526]/10 rounded-2xl shadow-xl border border-gray-700 p-6 flex flex-col items-center w-full max-w-sm mx-auto md:mx-0" style={{boxSizing: 'border-box'}}>
+            <div className="w-36 pt-1 pb-1 h-44 flex items-center justify-center rounded-xl mb-4 shadow-[0_0_20px_8px_rgba(35,37,38,0.95),0_0_40px_12px_rgba(35,37,38,0.7)] overflow-hidden group">
                 <img src={featEve2} alt="Ultimate Sports Quiz" className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105 rounded-2xl" />
             </div>
             <div className="w-full flex flex-col items-center">
-              <h3 className="text-2xl font-bold text-white mb-1 text-center">Ultimate Sports Quiz</h3>
-              <span className="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-[#ffe808]/80 to-[#ff5a00]/80 text-black text-xs font-semibold mb-3 w-fit">Quiz Competition</span>
-              <p className="text-orange-100 text-base mb-2 text-center">5 June - 6 June, 2025 &bull; BioTech Hall, IIT Madras</p>
-              <p className="text-gray-200 text-xs mb-6 text-center">Get ready to put your sports knowledge to the ultimate test! The Ultimate Sports Quiz at Paradox’25 is a thrilling challenge for sports enthusiasts, testing knowledge of legendary moments, records, and tricky trivia.</p>
+              <h3 className="text-lg font-bold text-white mb-1 text-center">Ultimate Sports Quiz</h3>
+              <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-[#ffe808]/80 to-[#ff5a00]/80 text-black text-xs font-semibold mb-3 w-fit">Quiz Competition</span>
+              <p className="text-orange-100 text-sm mb-4 text-center">5 June - 6 June, 2025 &bull; BioTech Hall, IIT Madras</p>
+              <p className="text-white text-xs mb-6 mt-2 text-center">Get ready to put your sports knowledge to the ultimate test! The Ultimate Sports Quiz at Paradox’25 is a thrilling challenge for sports enthusiasts, testing knowledge of legendary moments, records, and tricky.</p>
               <div className="flex flex-wrap gap-2 mb-2 justify-center">
                 {['Quiz', 'Sports', 'Trivia'].map(tag => (
-                  <span key={tag} className="px-3 py-1 rounded-full bg-[#181818] text-orange-300 text-xs font-medium border border-orange-700/40">{tag}</span>
+                  <span key={tag} className="px-2 py-1 rounded-full bg-[#181818] text-orange-300 text-xs font-medium border border-orange-700/40">{tag}</span>
                 ))}
               </div>
-              {/* Past Event tag removed */}
+            </div>
+          </div>
+
+          {/* The Pavilion - Episode 2 with Prof. Mahesh Panchagnula */}
+          <div className="bg-gradient-to-t from-[#232526] via-[#414345]/50 to-[#232526]/10 rounded-2xl shadow-xl border border-gray-700 p-6 flex flex-col items-center w-full max-w-sm mx-auto md:mx-0" style={{boxSizing: 'border-box'}}>
+            <div className="w-36 pt-1 pb-1 h-44 flex items-center justify-center rounded-xl mb-4 shadow-[0_0_20px_8px_rgba(35,37,38,0.95),0_0_40px_12px_rgba(35,37,38,0.7)] overflow-hidden group">
+                {/* Replace with actual image if available */}
+                <img src={featEve3} alt="The Pavilion - Episode 2" className="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-105 rounded-2xl" />
+            </div>
+            <div className="w-full flex flex-col items-center">
+              <h3 className="text-lg font-bold text-white mb-1 text-center">The Pavilion - Episode 2 </h3>
+              <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-[#ff5a00]/80 to-[#ffe808]/80 text-black text-xs font-semibold mb-3 w-fit">Guest Speaker</span>
+              <p className="text-orange-100 text-sm mb-4 text-center">13 May, 2025 &bull; Google Meet</p>
+              <p className="text-white text-xs mb-6 mt-2 text-center">Prof. Mahesh Panchagnula from IIT Madras discussed how technology, data science, and AI are transforming sports analytics and athletic performance in Episode 2 of The Pavilion.</p>
+              <div className="flex flex-wrap gap-2 mb-2 justify-center">
+                {['Technology', 'AI', 'Sports Analytics'].map(tag => (
+                  <span key={tag} className="px-2 py-1 rounded-full bg-[#181818] text-orange-300 text-xs font-medium border border-orange-700/40">{tag}</span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
