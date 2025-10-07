@@ -15,7 +15,7 @@ export default function ThePodiumPage() {
       className="min-h-screen bg-gradient-to-br from-black via-[#1a1a1a] to-black dark:bg-gray-950"
       style={{
         backgroundImage: `url(${podiumBG})`,
-        backgroundSize: "contain",
+        backgroundSize: "100% 100%",
         backgroundRepeat: "no-repeat",
         zIndex: 1,
       }}
