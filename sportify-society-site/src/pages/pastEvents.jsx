@@ -31,7 +31,7 @@ export default function PastEventsPage() {
             </div>
           </div>
         </h1>
-
+    
         {/* Events List */}
         <EventsList events={pastEvents} />
       </div>

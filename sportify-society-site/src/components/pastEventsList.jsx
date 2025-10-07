@@ -8,6 +8,8 @@ import {
   Sparkles,
 } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
+import bg1 from "../assets/PasteveBG1.jpeg";
+import bg2 from "../assets/PasteveBG2.jpeg";
 
 // Enhanced wavy border with multiple layers
 const WavyBorder = () => (
@@ -95,142 +97,6 @@ const HolographicIcon = ({ icon: Icon, color = "text-white" }) => (
   </div>
 );
 
-// Demo events data for testing
-// const demoEvents = [
-//   {
-//     id: 1,
-//     title: "Digital Art Exhibition",
-//     date: "June 5, 2025",
-//     location: "Neon Gallery, Tokyo",
-//     category: "Arts & Culture",
-//     description:
-//       "An immersive exhibition featuring digital art installations from renowned artists exploring the intersection of technology and creativity.",
-//     tags: ["Digital Art", "Interactive", "Technology"],
-//     image: "/api/placeholder/400/600",
-//   },
-//   {
-//     id: 2,
-//     title: "Future Tech Conference",
-//     date: "July 12, 2025",
-//     location: "Innovation Hub, San Francisco",
-//     category: "Technology",
-//     description:
-//       "Join industry leaders and innovators to explore emerging technologies shaping our future, from AI to quantum computing and beyond.",
-//     tags: ["AI", "Blockchain", "Robotics"],
-//     image: "/api/placeholder/400/600",
-//   },
-//   {
-//     id: 3,
-//     title: "Cosmic Music Festival",
-//     date: "August 20, 2025",
-//     location: "Starlight Arena, Berlin",
-//     category: "Music",
-//     description:
-//       "A three-day music festival featuring avant-garde artists and immersive audiovisual experiences under the stars.",
-//     tags: ["Electronic", "Live Music", "Visual Arts"],
-//     image: "/api/placeholder/400/600",
-//   },
-//   {
-//     id: 4,
-//     title: "Sustainable Design Summit",
-//     date: "September 8, 2025",
-//     location: "Eco Forum, Copenhagen",
-//     category: "Design",
-//     description:
-//       "Bringing together architects, designers, and environmental experts to showcase innovations in sustainable design and urban planning.",
-//     tags: ["Sustainability", "Architecture", "Innovation"],
-//     image: "/api/placeholder/400/600",
-//   },
-//   {
-//     id: 5,
-//     title: "Virtual Reality Showcase",
-//     date: "October 15, 2025",
-//     location: "Cyberspace Center, Seoul",
-//     category: "Technology",
-//     description:
-//       "Experience the latest breakthroughs in virtual reality technology with hands-on demos and talks from pioneering developers.",
-//     tags: ["VR", "Gaming", "Immersive Tech"],
-//     image: "/api/placeholder/400/600",
-//   },
-//   {
-//     id: 6,
-//     title: "Bio-Art Symposium",
-//     date: "November 3, 2025",
-//     location: "Science Gallery, Melbourne",
-//     category: "Arts & Science",
-//     description:
-//       "A fusion of biology and creative expression, featuring artworks created with living organisms and biotechnology.",
-//     tags: ["Bio-Art", "Science", "Experimental"],
-//     image: "/api/placeholder/400/600",
-//   },
-//   {
-//     id: 7,
-//     title: "Urban Dance Festival",
-//     date: "December 12, 2025",
-//     location: "Metropolitan Plaza, New York",
-//     category: "Dance",
-//     description:
-//       "Celebrating contemporary urban dance forms with performances, battles, and workshops from world-class dancers and choreographers.",
-//     tags: ["Street Dance", "Hip Hop", "Choreography"],
-//     image: "/api/placeholder/400/600",
-//   },
-//   {
-//     id: 8,
-//     title: "Quantum Computing Forum",
-//     date: "January 20, 2026",
-//     location: "Tech Institute, Zurich",
-//     category: "Science & Technology",
-//     description:
-//       "Explore the cutting edge of quantum computing with talks from leading researchers and demonstrations of the latest quantum technologies.",
-//     tags: ["Quantum", "Computing", "Research"],
-//     image: "/api/placeholder/400/600",
-//   },
-//   {
-//     id: 9,
-//     title: "Futuristic Fashion Show",
-//     date: "February 5, 2026",
-//     location: "Design District, Milan",
-//     category: "Fashion",
-//     description:
-//       "A runway showcase of avant-garde fashion designs incorporating smart textiles, sustainable materials, and technology-enhanced apparel.",
-//     tags: ["Fashion Tech", "Sustainable", "Design"],
-//     image: "/api/placeholder/400/600",
-//   },
-//   {
-//     id: 10,
-//     title: "Holographic Art Festival",
-//     date: "March 18, 2026",
-//     location: "Light Museum, Amsterdam",
-//     category: "Arts & Technology",
-//     description:
-//       "A spectacular exhibition of holographic art installations transforming physical spaces with light, color, and dimension.",
-//     tags: ["Holography", "Light Art", "Installation"],
-//     image: "/api/placeholder/400/600",
-//   },
-//   {
-//     id: 11,
-//     title: "AI & Creativity Summit",
-//     date: "April 22, 2026",
-//     location: "Innovation Center, Singapore",
-//     category: "Technology & Arts",
-//     description:
-//       "Exploring how artificial intelligence is revolutionizing creative fields from music composition to visual arts and literature.",
-//     tags: ["AI", "Creativity", "Innovation"],
-//     image: "/api/placeholder/400/600",
-//   },
-//   {
-//     id: 12,
-//     title: "Sonic Architecture Exhibition",
-//     date: "May 10, 2026",
-//     location: "Sound Gallery, Barcelona",
-//     category: "Sound Art",
-//     description:
-//       "An immersive exhibition exploring the relationship between sound, space, and architecture through interactive installations.",
-//     tags: ["Sound Art", "Architecture", "Interactive"],
-//     image: "/api/placeholder/400/600",
-//   },
-// ];
-
 export default function EventsList({ events }) {
   const [displayedEvents, setDisplayedEvents] = useState([]);
   const [activeIndex, setActiveIndex] = useState(null);
@@ -301,149 +167,145 @@ export default function EventsList({ events }) {
   return (
     <div className="space-y-24 relative py-12" ref={containerRef}>
       {/* Background mesh gradient */}
-      <div className="fixed -z-10 inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-900 to-black"></div>
-      {displayedEvents.map((event, index) => (
-        <div key={event.id} className="relative event-card my-16 py-6">
-          <Spotlight active={activeIndex === index} />
-          {/* Orbital decorative elements */}
-          <div className="absolute -z-10 w-full h-full pointer-events-none overflow-hidden">
-            <div
-              className={`absolute w-64 h-64 rounded-full border border-gray-700/30 ${index % 2 === 0 ? "-left-32" : "-right-32"} top-1/4 animate-slow-spin`}
-            />
-            <div
-              className={`absolute w-40 h-40 rounded-full border border-gray-700/20 ${index % 2 === 0 ? "-right-20" : "-left-20"} bottom-1/4 animate-slow-spin-reverse`}
-            />
-          </div>
-          <div
-            className={`flex flex-col ${
-              index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-            } gap-8 lg:gap-16 items-center opacity-0 transition-all duration-700 ease-out transform ${
-              true ? "opacity-100 translate-y-0" : "translate-y-8"
-            }`}
-            style={{ transitionDelay: `${(index % 5) * 150}ms` }}
+      <div className="fixed -z-10 px-80 inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-900 to-black"></div>
+      {displayedEvents.map((event, index) => {
+        const bgImage = index % 2 === 0 ? bg1 : bg2;
+        return (
+          <div 
+            key={event.id}
+            className="relative event-card my-16 px-12 py-16"
+            style={{            
+              backgroundImage: `url(${bgImage})`, 
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              borderRadius: '1rem',
+            }}
           >
-            {/* Event Image with enhanced reflection effect - Now in portrait format */}
-            <div className="w-full lg:w-2/5 rounded-xl overflow-hidden group">
-              <Reflection>
-                <div className="overflow-hidden rounded-xl relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#ff5a00]/30 to-[#ffe808]/20 z-10 opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
-                  <img
-                    src={event.image || "/api/placeholder/400/600"}
-                    alt={event.title}
-                    className="w-full h-[500px] object-cover transform transition-all duration-700 ease-in-out"
-                  />
-
-                  {/* Decorative corner accents on image */}
-                  <div className="absolute top-0 left-0 w-16 h-16 pointer-events-none">
-                    <div className="absolute top-3 left-3 w-3 h-3 border-t-2 border-l-2 border-white/40" />
-                  </div>
-                  <div className="absolute top-0 right-0 w-16 h-16 pointer-events-none">
-                    <div className="absolute top-3 right-3 w-3 h-3 border-t-2 border-r-2 border-white/40" />
-                  </div>
-                  <div className="absolute bottom-0 left-0 w-16 h-16 pointer-events-none">
-                    <div className="absolute bottom-3 left-3 w-3 h-3 border-b-2 border-l-2 border-white/40" />
-                  </div>
-                  <div className="absolute bottom-0 right-0 w-16 h-16 pointer-events-none">
-                    <div className="absolute bottom-3 right-3 w-3 h-3 border-b-2 border-r-2 border-white/40" />
-                  </div>
-                </div>
-              </Reflection>
+            <Spotlight active={activeIndex === index} />
+            {/* Orbital decorative elements */}
+            <div className="absolute -z-10 w-full h-full pointer-events-none overflow-hidden">
+              <div
+                className={`absolute w-64 h-64 rounded-full border border-gray-700/30 ${index % 2 === 0 ? "-left-32" : "-right-32"} top-1/4 animate-slow-spin`}
+              />
+              <div
+                className={`absolute w-40 h-40 rounded-full border border-gray-700/20 ${index % 2 === 0 ? "-right-20" : "-left-20"} bottom-1/4 animate-slow-spin-reverse`}
+              />
             </div>
-
-            {/* Event Details with enhanced decorative elements */}
-            <div className="w-full lg:w-3/5 space-y-4 relative p-6 group backdrop-blur-sm bg-gray-900/20 rounded-xl border border-gray-800/50">
-              {/* Fancy animated corners */}
-              <div className="absolute top-0 left-0 w-12 h-12 pointer-events-none">
-                <div className="absolute top-0 left-0 w-1 h-8 bg-gradient-to-b from-[#ff5a00] to-transparent transform origin-top-left transition-all duration-300 group-hover:h-10" />
-                <div className="absolute top-0 left-0 w-8 h-1 bg-gradient-to-r from-[#ff5a00] to-transparent transform origin-top-left transition-all duration-300 group-hover:w-10" />
-              </div>
-
-              <div className="absolute bottom-0 right-0 w-12 h-12 pointer-events-none">
-                <div className="absolute bottom-0 right-0 w-1 h-8 bg-gradient-to-t from-[#ffe808] to-transparent transform origin-bottom-right transition-all duration-300 group-hover:h-10" />
-                <div className="absolute bottom-0 right-0 w-8 h-1 bg-gradient-to-l from-[#ffe808] to-transparent transform origin-bottom-right transition-all duration-300 group-hover:w-10" />
-              </div>
-
-              <div className="absolute top-0 right-0 w-12 h-12 pointer-events-none opacity-60">
-                <div className="absolute top-0 right-0 w-1 h-8 bg-gradient-to-b from-purple-500 to-transparent" />
-                <div className="absolute top-0 right-0 w-8 h-1 bg-gradient-to-l from-purple-500 to-transparent" />
-              </div>
-
-              <div className="absolute bottom-0 left-0 w-12 h-12 pointer-events-none opacity-60">
-                <div className="absolute bottom-0 left-0 w-1 h-8 bg-gradient-to-t from-cyan-500 to-transparent" />
-                <div className="absolute bottom-0 left-0 w-8 h-1 bg-gradient-to-r from-cyan-500 to-transparent" />
-              </div>
-
-              {/* Decorative icon and category */}
-              <div className="flex items-center justify-between">
-                <span className="px-3 py-1 text-xs font-semibold rounded-full bg-gradient-to-r from-[#ff5a00] to-[#ffe808] text-black transform transition-transform duration-300 hover:scale-105">
-                  {event.category}
-                </span>
-                <div className="flex space-x-2">{getDecorativeIcon(index)}</div>
-              </div>
-
-              {/* Title with subtle gradient text effect */}
-              <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-300">
-                {event.title}
-              </h2>
-
-              {/* Enhanced info items with hover effects */}
-              <div className="flex flex-wrap gap-4 text-gray-300">
-                <div className="flex items-center gap-2 transition-all duration-300 hover:translate-x-1 hover:text-white group/item">
-                  <span className="p-1 rounded-full bg-gray-800/50 group-hover/item:bg-[#ff5a00]/20">
-                    <Calendar className="w-4 h-4 text-[#ff5a00]" />
-                  </span>
-                  <span>{event.date}</span>
+            <div
+              className={`flex flex-col ${
+                index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+              } gap-8 lg:gap-16 items-center opacity-0 transition-all duration-700 ease-out transform ${
+                true ? "opacity-100 translate-y-0" : "translate-y-8"
+              }`}
+              style={{ transitionDelay: `${(index % 5) * 150}ms` }}
+            >
+              {/* Event Image with enhanced reflection effect - Now in portrait format */}
+              <di v className="w-full lg:w-2/5 rounded-xl overflow-hidden group">
+                <Reflection>
+                  <div className="overflow-hidden rounded-xl relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#ff5a00]/30 to-[#ffe808]/20 z-10 opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
+                    <img
+                      src={event.image || "/api/placeholder/400/600"}
+                      alt={event.title}
+                      className="w-full h-[500px] object-cover transform transition-all duration-700 ease-in-out"
+                    />
+                    {/* Decorative corner accents on image */}
+                    <div className="absolute top-0 left-0 w-16 h-16 pointer-events-none">
+                      <div className="absolute top-3 left-3 w-3 h-3 border-t-2 border-l-2 border-white/40" />
+                    </div>
+                    <div className="absolute top-0 right-0 w-16 h-16 pointer-events-none">
+                      <div className="absolute top-3 right-3 w-3 h-3 border-t-2 border-r-2 border-white/40" />
+                    </div>
+                    <div className="absolute bottom-0 left-0 w-16 h-16 pointer-events-none">
+                      <div className="absolute bottom-3 left-3 w-3 h-3 border-b-2 border-l-2 border-white/40" />
+                    </div>
+                    <div className="absolute bottom-0 right-0 w-16 h-16 pointer-events-none">
+                      <div className="absolute bottom-3 right-3 w-3 h-3 border-b-2 border-r-2 border-white/40" />
+                    </div>
+                  </div>
+                </Reflection>
+              </di>
+              {/* Event Details with enhanced decorative elements */}
+              <div className="w-full lg:w-3/5 space-y-4 relative p-6 group backdrop-blur-sm bg-gray-900/20 rounded-xl border border-gray-800/50">
+                {/* Fancy animated corners */}
+                <div className="absolute top-0 left-0 w-12 h-12 pointer-events-none">
+                  <div className="absolute top-0 left-0 w-1 h-12 bg-gradient-to-b from-[#ff5a00] to-transparent transform origin-top-left transition-all duration-300 group-hover:h-32" />
+                  <div className="absolute top-0 left-0 w-12 h-1 bg-gradient-to-r from-[#ff5a00] to-transparent transform origin-top-left transition-all duration-300 group-hover:w-32" />
                 </div>
-
-                <div className="flex items-center gap-2 transition-all duration-300 hover:translate-x-1 hover:text-white group/item">
-                  <span className="p-1 rounded-full bg-gray-800/50 group-hover/item:bg-[#ff5a00]/20">
-                    <MapPin className="w-4 h-4 text-[#ff5a00]" />
-                  </span>
-                  <span>{event.location}</span>
+                <div className="absolute bottom-0 right-0 w-12 h-12 pointer-events-none">
+                  <div className="absolute bottom-0 right-0 w-1 h-12 bg-gradient-to-t from-[#ffe808] to-transparent transform origin-bottom-right transition-all duration-300 group-hover:h-32" />
+                  <div className="absolute bottom-0 right-0 w-12 h-1 bg-gradient-to-l from-[#ffe808] to-transparent transform origin-bottom-right transition-all duration-300 group-hover:w-32" />
                 </div>
-              </div>
-
-              {/* Description with subtle animated background */}
-              <div className="relative overflow-hidden rounded-lg p-4 bg-gray-800/30">
-                <div className="absolute -inset-full h-full w-1/2 z-10 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-40 animate-shine pointer-events-none" />
-                <p className="text-gray-300 leading-relaxed relative z-20">
-                  {event.description}
-                </p>
-              </div>
-
-              {/* Enhanced tags with animated hover effects */}
-              <div className="pt-4">
-                <div className="flex flex-wrap gap-2">
-                  {event.tags &&
-                    event.tags.map((tag, i) => (
-                      <span
-                        key={i}
-                        className="inline-flex items-center px-3 py-1 text-xs rounded-full bg-gray-800/70 text-gray-300 transition-all duration-300 hover:bg-gray-700 hover:text-white hover:translate-y-1 backdrop-blur-sm"
-                        style={{ animationDelay: `${i * 100}ms` }}
-                      >
-                        <Tag className="w-3 h-3 mr-1 text-[#ff5a00]" />
-                        {tag}
-                      </span>
-                    ))}
+                <div className="absolute top-0 right-0 w-12 h-12 pointer-events-none opacity-60">
+                  <div className="absolute -top-[16px] right-0 w-1 h-16 bg-gradient-to-b from-purple-500 to-transparent" />
+                  <div className="absolute -top-[16px] right-0 w-16 h-1 bg-gradient-to-l from-purple-500 to-transparent" />
+                </div>
+                <div className="absolute bottom-0 left-0 w-12 h-12 pointer-events-none opacity-60">
+                  <div className="absolute bottom-0 left-0 w-1 h-16 bg-gradient-to-t from-cyan-500 to-transparent" />
+                  <div className="absolute bottom-0 left-0 w-16 h-1 bg-gradient-to-r from-cyan-500 to-transparent" />
+                </div>
+                {/* Decorative icon and category */}
+                <div className="flex items-center justify-between">
+                  <span className="px-3 py-1 text-xs font-semibold rounded-full bg-gradient-to-r from-[#ff5a00] to-[#ffe808] text-black transform transition-transform duration-300 hover:scale-105">
+                    {event.category}
+                  </span>
+                  <div className="flex space-x-2">{getDecorativeIcon(index)}</div>
+                </div>
+                {/* Title with subtle gradient text effect */}
+                <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-300">
+                  {event.title}
+                </h2>
+                {/* Enhanced info items with hover effects */}
+                <div className="flex flex-wrap gap-4 text-gray-300">
+                  <div className="flex items-center gap-2 transition-all duration-300 hover:translate-x-1 hover:text-white group/item">
+                    <span className="p-1 rounded-full bg-gray-800/50 group-hover/item:bg-[#ff5a00]/20">
+                      <Calendar className="w-4 h-4 text-[#ff5a00]" />
+                    </span>
+                    <span>{event.date}</span>
+                  </div>
+                  <div className="flex items-center gap-2 transition-all duration-300 hover:translate-x-1 hover:text-white group/item">
+                    <span className="p-1 rounded-full bg-gray-800/50 group-hover/item:bg-[#ff5a00]/20">
+                      <MapPin className="w-4 h-4 text-[#ff5a00]" />
+                    </span>
+                    <span>{event.location}</span>
+                  </div>
+                </div>
+                {/* Description with subtle animated background */}
+                <div className="relative overflow-hidden rounded-lg p-4 bg-gray-800/30">
+                  <div className="absolute -inset-full h-full w-1/2 z-10 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-40 animate-shine pointer-events-none" />
+                  <p className="text-gray-300 leading-relaxed relative z-20">
+                    {event.description}
+                  </p>
+                </div>
+                {/* Enhanced tags with animated hover effects */}
+                <div className="pt-4">
+                  <div className="flex flex-wrap gap-2">
+                    {event.tags &&
+                      event.tags.map((tag, i) => (
+                        <span
+                          key={i}
+                          className="inline-flex items-center px-3 py-1 text-xs rounded-full bg-gray-800/70 text-gray-300 transition-all duration-300 hover:bg-gray-700 hover:text-white hover:translate-y-1 backdrop-blur-sm"
+                          style={{ animationDelay: `${i * 100}ms` }}
+                        >
+                          <Tag className="w-3 h-3 mr-1 text-[#ff5a00]" />
+                          {tag}
+                        </span>
+                      ))}
+                  </div>
                 </div>
               </div>
             </div>
+            
           </div>
-          {/* Enhanced divider with animated dot */}
-          {index < displayedEvents.length - 1 && (
-            <div className="my-16 relative flex items-center justify-center">
-              <div className="absolute w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent" />
-              <div className="absolute w-3 h-3 rounded-full bg-[#ff5a00] z-10 animate-pulse-slow" />
-            </div>
-          )}
-        </div>
-      ))}
-      
+        );
+      })}
+
       {/* Progress indicator */}
       <div className="fixed bottom-6 right-6 bg-gray-900/80 backdrop-blur-md px-3 py-2 rounded-full text-sm text-white/70 border border-gray-800/50">
         {displayedEvents.length} / {events.length} events
       </div>
-      
+
       {/* Enhanced background floating elements */}
       <div className="fixed -z-10 top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="blur-3xl opacity-10 absolute -top-40 -right-40 w-80 h-80 rounded-full bg-[#ff5a00] animate-float" />
